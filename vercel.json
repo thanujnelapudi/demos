@@ -1,8 +1,7 @@
 ﻿{
-  "cleanUrls": true,
   "rewrites": [
-    { "source": "/", "destination": "/Cakes&shakes/index.html" },
-    { "source": "/cakes-and-shakes", "destination": "/Cakes&shakes/index.html" },
-    { "source": "/cakes", "destination": "/Cakes&shakes/index.html" }
+    { "source": "/", "destination": "/Cakes%26shakes/index.html" },
+    { "source": "/cakes", "destination": "/Cakes%26shakes/index.html" },
+    { "source": "/cakes-and-shakes", "destination": "/Cakes%26shakes/index.html" }
   ]
 }
