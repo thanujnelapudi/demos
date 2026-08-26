@@ -1,7 +1,0 @@
-﻿{
-  "rewrites": [
-    { "source": "/", "destination": "/Cakes%26shakes/index.html" },
-    { "source": "/cakes", "destination": "/Cakes%26shakes/index.html" },
-    { "source": "/cakes-and-shakes", "destination": "/Cakes%26shakes/index.html" }
-  ]
-}
