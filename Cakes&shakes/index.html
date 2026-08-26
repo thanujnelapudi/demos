@@ -147,12 +147,16 @@
         top: 0;
         left: 0;
         right: 0;
+        height: 0;
+        overflow: hidden;
         transform: translateY(20px);
     }
     .page-container.active-page {
         opacity: 1;
         pointer-events: auto;
         position: relative;
+        height: auto;
+        overflow: visible;
         transform: translateY(0);
     }
 
@@ -330,6 +334,7 @@
 </style>
 </head>
 <body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden selection:bg-tertiary-fixed selection:text-on-tertiary-fixed">
+<div style="position:relative; overflow:hidden;">
 
 <!-- ============================================ -->
 <!-- CAKES & SHAKES PAGE                          -->
@@ -1172,5 +1177,7 @@
         }
     });
 </script>
+</div><!-- End page wrapper -->
 </body>
 </html>
+
