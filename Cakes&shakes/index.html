@@ -1,1183 +1,1465 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html class="scroll-smooth" lang="en">
+
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Cakes &amp; Shakes | Surprise Studio</title>
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&family=Grand+Hotel&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=DM+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
-<!-- Material Symbols -->
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-<!-- Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<!-- Tailwind Config -->
-<script id="tailwind-config">
-    tailwind.config = {
-        darkMode: "class",
-        theme: {
-            extend: {
-                "colors": {
-                    "on-secondary-container": "#774800",
-                    "primary-fixed-dim": "#e9bdad",
-                    "surface-tint": "#78574a",
-                    "surface-variant": "#e9e1de",
-                    "on-primary": "#ffffff",
-                    "on-tertiary": "#ffffff",
-                    "on-error-container": "#93000a",
-                    "primary-fixed": "#ffdbce",
-                    "on-tertiary-fixed-variant": "#8b1044",
-                    "error-container": "#ffdad6",
-                    "on-primary-fixed-variant": "#5e3f34",
-                    "on-primary-container": "#bd9586",
-                    "on-surface": "#1e1b1a",
-                    "inverse-primary": "#e9bdad",
-                    "on-secondary": "#ffffff",
-                    "surface-container": "#f5ecea",
-                    "inverse-surface": "#342f2e",
-                    "secondary-fixed-dim": "#ffb867",
-                    "on-error": "#ffffff",
-                    "secondary-container": "#ffb867",
-                    "surface-container-highest": "#e9e1de",
-                    "surface-dim": "#e0d8d6",
-                    "outline-variant": "#d4c3bd",
-                    "primary-container": "#4a2e23",
-                    "background": "#fff8f6",
-                    "inverse-on-surface": "#f8efec",
-                    "secondary-fixed": "#ffddba",
-                    "tertiary-fixed": "#ffd9e0",
-                    "on-tertiary-fixed": "#3f001a",
-                    "outline": "#82746f",
-                    "tertiary-container": "#6e0032",
-                    "surface-container-low": "#fbf2ef",
-                    "surface-container-high": "#efe6e4",
-                    "secondary": "#875303",
-                    "surface": "#fff8f6",
-                    "surface-bright": "#fff8f6",
-                    "on-background": "#1e1b1a",
-                    "on-secondary-fixed-variant": "#673d00",
-                    "surface-container-lowest": "#ffffff",
-                    "on-tertiary-container": "#fc6d9a",
-                    "tertiary": "#47001e",
-                    "primary": "#321910",
-                    "error": "#ba1a1a",
-                    "on-primary-fixed": "#2d150c",
-                    "tertiary-fixed-dim": "#ffb1c4",
-                    "on-secondary-fixed": "#2b1700",
-                    "on-surface-variant": "#504440"
-                },
-                "borderRadius": {
-                    "DEFAULT": "0.25rem",
-                    "lg": "0.5rem",
-                    "xl": "0.75rem",
-                    "full": "9999px",
-                    "2xl": "1rem",
-                    "3xl": "1.5rem"
-                },
-                "spacing": {
-                    "gutter": "20px",
-                    "margin": "24px",
-                    "base": "8px",
-                    "xl": "80px",
-                    "sm": "12px",
-                    "md": "24px",
-                    "xs": "4px",
-                    "lg": "48px"
-                },
-                "fontFamily": {
-                    "headline-md": ["'Grand Hotel'", "cursive"],
-                    "body-lg": ["'Plus Jakarta Sans'", "sans-serif"],
-                    "display-lg-mobile": ["'Grand Hotel'", "cursive"],
-                    "body-md": ["'Plus Jakarta Sans'", "sans-serif"],
-                    "label-bold": ["'Plus Jakarta Sans'", "sans-serif"],
-                    "display-lg": ["'Grand Hotel'", "cursive"],
-                    "serif": ["'Cormorant Garamond'", "serif"],
-                    "sans": ["'DM Sans'", "sans-serif"],
-                    "mono": ["'Space Mono'", "monospace"]
-                },
-                "fontSize": {
-                    "headline-md": ["36px", { "lineHeight": "40px", "fontWeight": "400" }],
-                    "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
-                    "display-lg-mobile": ["48px", { "lineHeight": "50px", "letterSpacing": "0", "fontWeight": "400" }],
-                    "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
-                    "label-bold": ["14px", { "lineHeight": "20px", "fontWeight": "700" }],
-                    "display-lg": ["72px", { "lineHeight": "80px", "letterSpacing": "0", "fontWeight": "400" }]
-                },
-                boxShadow: {
-                    'creamy': '0px 10px 30px rgba(74, 46, 35, 0.08)',
-                    'creamy-hover': '0px 20px 40px rgba(74, 46, 35, 0.12)',
-                    'neon': '0 0 13px #e7c878',
-                    'neon-lg': '0 0 30px #e7c878, 0 0 60px #e7c87844',
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Cakes &amp; Shakes | Surprise Studio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&family=Grand+Hotel&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=DM+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet" />
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Tailwind Config -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-container": "#774800",
+                        "primary-fixed-dim": "#e9bdad",
+                        "surface-tint": "#78574a",
+                        "surface-variant": "#e9e1de",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#ffdbce",
+                        "on-tertiary-fixed-variant": "#8b1044",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#5e3f34",
+                        "on-primary-container": "#bd9586",
+                        "on-surface": "#1e1b1a",
+                        "inverse-primary": "#e9bdad",
+                        "on-secondary": "#ffffff",
+                        "surface-container": "#f5ecea",
+                        "inverse-surface": "#342f2e",
+                        "secondary-fixed-dim": "#ffb867",
+                        "on-error": "#ffffff",
+                        "secondary-container": "#ffb867",
+                        "surface-container-highest": "#e9e1de",
+                        "surface-dim": "#e0d8d6",
+                        "outline-variant": "#d4c3bd",
+                        "primary-container": "#4a2e23",
+                        "background": "#fff8f6",
+                        "inverse-on-surface": "#f8efec",
+                        "secondary-fixed": "#ffddba",
+                        "tertiary-fixed": "#ffd9e0",
+                        "on-tertiary-fixed": "#3f001a",
+                        "outline": "#82746f",
+                        "tertiary-container": "#6e0032",
+                        "surface-container-low": "#fbf2ef",
+                        "surface-container-high": "#efe6e4",
+                        "secondary": "#875303",
+                        "surface": "#fff8f6",
+                        "surface-bright": "#fff8f6",
+                        "on-background": "#1e1b1a",
+                        "on-secondary-fixed-variant": "#673d00",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#fc6d9a",
+                        "tertiary": "#47001e",
+                        "primary": "#321910",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed": "#2d150c",
+                        "tertiary-fixed-dim": "#ffb1c4",
+                        "on-secondary-fixed": "#2b1700",
+                        "on-surface-variant": "#504440"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px",
+                        "2xl": "1rem",
+                        "3xl": "1.5rem"
+                    },
+                    "spacing": {
+                        "gutter": "20px",
+                        "margin": "24px",
+                        "base": "8px",
+                        "xl": "80px",
+                        "sm": "12px",
+                        "md": "24px",
+                        "xs": "4px",
+                        "lg": "48px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["'Grand Hotel'", "cursive"],
+                        "body-lg": ["'Plus Jakarta Sans'", "sans-serif"],
+                        "display-lg-mobile": ["'Grand Hotel'", "cursive"],
+                        "body-md": ["'Plus Jakarta Sans'", "sans-serif"],
+                        "label-bold": ["'Plus Jakarta Sans'", "sans-serif"],
+                        "display-lg": ["'Grand Hotel'", "cursive"],
+                        "serif": ["'Cormorant Garamond'", "serif"],
+                        "sans": ["'DM Sans'", "sans-serif"],
+                        "mono": ["'Space Mono'", "monospace"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["36px", { "lineHeight": "40px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-lg-mobile": ["48px", { "lineHeight": "50px", "letterSpacing": "0", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-bold": ["14px", { "lineHeight": "20px", "fontWeight": "700" }],
+                        "display-lg": ["72px", { "lineHeight": "80px", "letterSpacing": "0", "fontWeight": "400" }]
+                    },
+                    boxShadow: {
+                        'creamy': '0px 10px 30px rgba(74, 46, 35, 0.08)',
+                        'creamy-hover': '0px 20px 40px rgba(74, 46, 35, 0.12)',
+                        'neon': '0 0 13px #e7c878',
+                        'neon-lg': '0 0 30px #e7c878, 0 0 60px #e7c87844',
+                    }
                 }
             }
         }
-    }
-</script>
-<style>
-    .material-symbols-outlined {
-        font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-    }
-    
-    .squircle {
-        border-radius: 40px 10px 30px 20px;
-    }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
 
-    .frosting-drip {
-        fill: #fdf2f5;
-    }
-    
-    .frosting-drip-mint {
-        fill: #f0faf8;
-    }
-    .frosting-drip-cream {
-        fill: #fff8f6;
-    }
+        .squircle {
+            border-radius: 40px 10px 30px 20px;
+        }
 
-    /* ============================================ */
-    /* PAGE TRANSITION STYLES                       */
-    /* ============================================ */
-    .page-container {
-        transition: opacity 0.5s ease, transform 0.5s ease;
-    }
-    .page-container.hidden-page {
-        opacity: 0;
-        pointer-events: none;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 0;
-        overflow: hidden;
-        transform: translateY(20px);
-    }
-    .page-container.active-page {
-        opacity: 1;
-        pointer-events: auto;
-        position: relative;
-        height: auto;
-        overflow: visible;
-        transform: translateY(0);
-    }
+        .frosting-drip {
+            fill: #fdf2f5;
+        }
 
-    /* ============================================ */
-    /* SURPRISE STUDIO STYLES                       */
-    /* ============================================ */
-    .ss-body {
-        background: #24131f;
-        color: #f1e6d3;
-    }
-    .ss-label {
-        font-family: 'Space Mono', monospace;
-        font-size: 11px;
-        letter-spacing: 0.25em;
-        text-transform: uppercase;
-        color: #d7b36a;
-    }
-    .ss-heading {
-        font-family: 'Cormorant Garamond', serif;
-        font-weight: 400;
-        color: #f1e6d3;
-    }
-    .ss-heading em, .ss-heading i {
-        font-style: italic;
-        color: #d7b36a;
-    }
-    .ss-body-text {
-        font-family: 'DM Sans', sans-serif;
-        color: #c3ada7;
-        line-height: 1.6;
-    }
-    .ss-nav-link {
-        font-family: 'Space Mono', monospace;
-        font-size: 11px;
-        letter-spacing: 0.2em;
-        text-transform: uppercase;
-        color: #c3ada7;
-        text-decoration: none;
-        transition: color 0.3s;
-    }
-    .ss-nav-link:hover {
-        color: #d7b36a;
-    }
-    .ss-btn-primary {
-        font-family: 'Space Mono', monospace;
-        font-size: 11px;
-        letter-spacing: 0.2em;
-        text-transform: uppercase;
-        background: #d7b36a;
-        color: #24131f;
-        padding: 14px 28px;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        transition: all 0.3s;
-        border: none;
-        cursor: pointer;
-    }
-    .ss-btn-primary:hover {
-        background: #e7c878;
-        box-shadow: 0 0 20px rgba(231, 200, 120, 0.3);
-    }
-    .ss-btn-outline {
-        font-family: 'Space Mono', monospace;
-        font-size: 11px;
-        letter-spacing: 0.2em;
-        text-transform: uppercase;
-        background: transparent;
-        color: #f1e6d3;
-        padding: 14px 28px;
-        border: 1px solid rgba(215, 179, 106, 0.4);
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        transition: all 0.3s;
-        cursor: pointer;
-    }
-    .ss-btn-outline:hover {
-        border-color: #d7b36a;
-        color: #d7b36a;
-    }
+        .frosting-drip-mint {
+            fill: #f0faf8;
+        }
 
-    /* Marquee */
-    @keyframes marquee {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-50%); }
-    }
-    .marquee-track {
-        animation: marquee 25s linear infinite;
-    }
+        .frosting-drip-cream {
+            fill: #fff8f6;
+        }
 
-    /* Occasion accordion */
-    .occasion-item {
-        border-top: 1px solid rgba(118, 91, 85, 0.3);
-        cursor: pointer;
-        transition: all 0.3s;
-    }
-    .occasion-item:last-child {
-        border-bottom: 1px solid rgba(118, 91, 85, 0.3);
-    }
-    .occasion-item:hover .occasion-title {
-        color: #d7b36a;
-    }
-    .occasion-item.active .occasion-title {
-        color: #d7b36a;
-    }
-    .occasion-desc {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.4s ease, opacity 0.3s ease;
-        opacity: 0;
-    }
-    .occasion-item.active .occasion-desc {
-        max-height: 120px;
-        opacity: 1;
-    }
+        /* ============================================ */
+        /* PAGE TRANSITION STYLES                       */
+        /* ============================================ */
+        .page-container {
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
 
-    /* Testimonial cards */
-    .ss-testimonial {
-        background: rgba(43, 23, 36, 0.6);
-        border: 1px solid rgba(118, 91, 85, 0.3);
-        padding: 32px;
-        transition: all 0.3s;
-    }
-    .ss-testimonial:hover {
-        border-color: rgba(215, 179, 106, 0.3);
-    }
+        .page-container.hidden-page {
+            opacity: 0;
+            pointer-events: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 0;
+            overflow: hidden;
+            transform: translateY(20px);
+        }
 
-    /* Hero background parallax-like effect */
-    .ss-hero {
-        position: relative;
-        overflow: hidden;
-    }
-    .ss-hero-bg {
-        position: absolute;
-        inset: 0;
-        background-size: cover;
-        background-position: center;
-        z-index: 0;
-    }
-    .ss-hero-overlay {
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(90deg, rgba(36, 19, 31, 0.92) 0%, rgba(36, 19, 31, 0.5) 50%, rgba(36, 19, 31, 0.2) 100%);
-        z-index: 1;
-    }
-    .ss-hero-content {
-        position: relative;
-        z-index: 2;
-    }
+        .page-container.active-page {
+            opacity: 1;
+            pointer-events: auto;
+            position: relative;
+            height: auto;
+            overflow: visible;
+            transform: translateY(0);
+        }
 
-    /* Gold divider line */
-    .gold-line {
-        height: 1px;
-        background: linear-gradient(90deg, #d7b36a, rgba(215, 179, 106, 0.1));
-    }
+        /* ============================================ */
+        /* SURPRISE STUDIO STYLES                       */
+        /* ============================================ */
+        .ss-body {
+            background: #24131f;
+            color: #f1e6d3;
+        }
 
-    /* Gallery hover */
-    .ss-gallery-item {
-        overflow: hidden;
-        border-radius: 4px;
-    }
-    .ss-gallery-item img {
-        transition: transform 0.6s ease;
-    }
-    .ss-gallery-item:hover img {
-        transform: scale(1.05);
-    }
+        .ss-label {
+            font-family: 'Space Mono', monospace;
+            font-size: 11px;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: #d7b36a;
+        }
 
-    @media (max-width: 768px) {
+        .ss-heading {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
+            color: #f1e6d3;
+        }
+
+        .ss-heading em,
+        .ss-heading i {
+            font-style: italic;
+            color: #d7b36a;
+        }
+
+        .ss-body-text {
+            font-family: 'DM Sans', sans-serif;
+            color: #c3ada7;
+            line-height: 1.6;
+        }
+
+        .ss-nav-link {
+            font-family: 'Space Mono', monospace;
+            font-size: 11px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #c3ada7;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .ss-nav-link:hover {
+            color: #d7b36a;
+        }
+
+        .ss-btn-primary {
+            font-family: 'Space Mono', monospace;
+            font-size: 11px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            background: #d7b36a;
+            color: #24131f;
+            padding: 14px 28px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .ss-btn-primary:hover {
+            background: #e7c878;
+            box-shadow: 0 0 20px rgba(231, 200, 120, 0.3);
+        }
+
+        .ss-btn-outline {
+            font-family: 'Space Mono', monospace;
+            font-size: 11px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            background: transparent;
+            color: #f1e6d3;
+            padding: 14px 28px;
+            border: 1px solid rgba(215, 179, 106, 0.4);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .ss-btn-outline:hover {
+            border-color: #d7b36a;
+            color: #d7b36a;
+        }
+
+        /* Marquee */
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .marquee-track {
+            animation: marquee 25s linear infinite;
+        }
+
+        /* Occasion accordion */
+        .occasion-item {
+            border-top: 1px solid rgba(118, 91, 85, 0.3);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .occasion-item:last-child {
+            border-bottom: 1px solid rgba(118, 91, 85, 0.3);
+        }
+
+        .occasion-item:hover .occasion-title {
+            color: #d7b36a;
+        }
+
+        .occasion-item.active .occasion-title {
+            color: #d7b36a;
+        }
+
+        .occasion-desc {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, opacity 0.3s ease;
+            opacity: 0;
+        }
+
+        .occasion-item.active .occasion-desc {
+            max-height: 120px;
+            opacity: 1;
+        }
+
+        /* Testimonial cards */
+        .ss-testimonial {
+            background: rgba(43, 23, 36, 0.6);
+            border: 1px solid rgba(118, 91, 85, 0.3);
+            padding: 32px;
+            transition: all 0.3s;
+        }
+
+        .ss-testimonial:hover {
+            border-color: rgba(215, 179, 106, 0.3);
+        }
+
+        /* Hero background parallax-like effect */
+        .ss-hero {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ss-hero-bg {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            z-index: 0;
+        }
+
         .ss-hero-overlay {
-            background: linear-gradient(180deg, rgba(36, 19, 31, 0.6) 0%, rgba(36, 19, 31, 0.94) 80%, rgba(36, 19, 31, 0.98) 100%);
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(36, 19, 31, 0.92) 0%, rgba(36, 19, 31, 0.5) 50%, rgba(36, 19, 31, 0.2) 100%);
+            z-index: 1;
         }
-    }
-</style>
+
+        .ss-hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Gold divider line */
+        .gold-line {
+            height: 1px;
+            background: linear-gradient(90deg, #d7b36a, rgba(215, 179, 106, 0.1));
+        }
+
+        /* Gallery hover */
+        .ss-gallery-item {
+            overflow: hidden;
+            border-radius: 4px;
+        }
+
+        .ss-gallery-item img {
+            transition: transform 0.6s ease;
+        }
+
+        .ss-gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .ss-hero-overlay {
+                background: linear-gradient(180deg, rgba(36, 19, 31, 0.6) 0%, rgba(36, 19, 31, 0.94) 80%, rgba(36, 19, 31, 0.98) 100%);
+            }
+        }
+    </style>
 </head>
-<body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden selection:bg-tertiary-fixed selection:text-on-tertiary-fixed">
-<div style="position:relative; overflow:hidden;">
 
-<!-- ============================================ -->
-<!-- CAKES & SHAKES PAGE                          -->
-<!-- ============================================ -->
-<div class="page-container active-page" id="cakes-page">
-<!-- TopNavBar -->
-<nav class="fixed top-0 left-0 w-full z-50 bg-[#fff8f6]/95 backdrop-blur-md border-b border-primary/10 shadow-sm transition-all duration-300" id="main-nav">
-    <div class="max-w-7xl mx-auto flex justify-between items-center px-4 sm:px-6 md:px-margin py-3 md:py-base">
-        <div class="font-headline-md text-3xl sm:text-headline-md text-primary hover:scale-105 transition-all duration-300 cursor-pointer" onclick="window.scrollTo({top:0, behavior:'smooth'})">
-            Cakes &amp; Shakes
-        </div>
-        <div class="hidden md:flex items-center gap-md">
-            <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors hover:scale-105 duration-300" href="#what-we-craft">What We Craft</a>
-            <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors hover:scale-105 duration-300" href="#cakes">Cakes</a>
-            <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors hover:scale-105 duration-300" href="#shakes">Shakes</a>
-            <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors hover:scale-105 duration-300" href="#about">About</a>
-            <a class="font-body-md text-body-md text-[#C98A3D] hover:underline hover:text-[#b3772e] transition-colors cursor-pointer" onclick="switchTo('surprise')">Also by us: Surprise Studio &rarr;</a>
-        </div>
-        <div class="flex items-center gap-2 sm:gap-3">
-            <a href="https://maps.app.goo.gl/MAoyBanSnWvVWghy8" target="_blank" class="hidden sm:inline-flex bg-secondary text-on-secondary px-5 py-2 sm:px-6 sm:py-2 rounded-full font-label-bold text-xs sm:text-label-bold shadow-creamy hover:-translate-y-0.5 hover:shadow-creamy-hover transition-all duration-300 border-b-2 border-primary/20">
-                Book Now
-            </a>
-            <!-- Mobile Hamburger Button -->
-            <button id="cakes-menu-btn" onclick="toggleCakesMenu()" aria-label="Toggle navigation menu" class="md:hidden p-2 rounded-lg text-primary hover:bg-primary/5 focus:outline-none flex items-center justify-center">
-                <span class="material-symbols-outlined text-2xl" id="cakes-menu-icon">menu</span>
-            </button>
-        </div>
-    </div>
+<body
+    class="bg-background text-on-background font-body-md antialiased overflow-x-hidden selection:bg-tertiary-fixed selection:text-on-tertiary-fixed">
+    <div style="position:relative; overflow:hidden;">
 
-    <!-- Mobile Dropdown Menu -->
-    <div id="cakes-mobile-menu" class="hidden md:hidden bg-[#fff8f6] border-b border-primary/10 px-5 py-5 shadow-lg transition-all duration-300">
-        <div class="flex flex-col gap-3">
-            <a class="font-body-md text-base text-on-surface-variant hover:text-primary py-2 border-b border-primary/5" href="#what-we-craft" onclick="toggleCakesMenu()">What We Craft</a>
-            <a class="font-body-md text-base text-on-surface-variant hover:text-primary py-2 border-b border-primary/5" href="#cakes" onclick="toggleCakesMenu()">Cakes</a>
-            <a class="font-body-md text-base text-on-surface-variant hover:text-primary py-2 border-b border-primary/5" href="#shakes" onclick="toggleCakesMenu()">Shakes</a>
-            <a class="font-body-md text-base text-on-surface-variant hover:text-primary py-2 border-b border-primary/5" href="#about" onclick="toggleCakesMenu()">About</a>
-            <a class="font-body-md text-sm font-semibold text-[#C98A3D] hover:underline py-2.5 border-b border-primary/5 cursor-pointer" onclick="toggleCakesMenu(); switchTo('surprise')">Also by us: Surprise Studio &rarr;</a>
-            <div class="pt-2">
-                <a href="https://maps.app.goo.gl/MAoyBanSnWvVWghy8" target="_blank" class="w-full bg-secondary text-on-secondary py-3 rounded-full font-label-bold text-center block shadow-creamy border-b-2 border-primary/20">
-                    Book Now
-                </a>
-            </div>
-        </div>
-    </div>
-</nav>
-
-<main class="pt-[68px] md:pt-[80px]">
-<!-- Hero Section -->
-<section class="min-h-[560px] md:min-h-[640px] bg-[#fff8f6] flex flex-col justify-center px-4 sm:px-6 md:px-lg relative pt-6 sm:pt-8 md:pt-10 pb-12 sm:pb-16 md:pb-20 overflow-hidden">
-    <div class="w-full max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-12 lg:gap-16 z-10">
-        <!-- Hero Left Column: Clean, Large Typography, CTAs & Understated Social Proof -->
-        <div class="flex-1 text-center lg:text-left z-10 w-full">
-            <!-- Primary Headline (Magnified text sizing, clean & elegant) -->
-            <h1 class="font-display-lg-mobile md:font-display-lg text-4xl sm:text-5xl md:text-7xl lg:text-[88px] text-primary mb-4 sm:mb-6 leading-[1.1] sm:leading-[1.08] tracking-tight">
-                Cakes &amp; Shakes<br/>
-                <span class="italic font-serif text-secondary">worth celebrating.</span>
-            </h1>
-
-            <!-- Descriptive Subtitle -->
-            <p class="font-body-lg text-base sm:text-lg md:text-xl text-on-surface-variant leading-relaxed font-sans max-w-lg mx-auto lg:mx-0 mb-6 sm:mb-8">
-                Handcrafted layers of joy for your most special moments. Baked with love, designed to delight.
-            </p>
-
-            <!-- CTA Buttons -->
-            <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 mb-6 sm:mb-8 w-full">
-                <a href="https://maps.app.goo.gl/MAoyBanSnWvVWghy8" target="_blank" class="w-full sm:w-auto min-h-[48px] bg-secondary-container text-on-secondary-container px-6 py-3.5 sm:px-8 sm:py-4 rounded-full font-label-bold text-base sm:text-lg shadow-creamy hover:-translate-y-0.5 hover:shadow-creamy-hover active:scale-95 transition-all duration-300 border-b-2 border-primary-container/20 inline-flex items-center justify-center gap-2 group">
-                    <span>Book Your Cake</span>
-                    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                </a>
-                <a href="#what-we-craft" class="w-full sm:w-auto min-h-[48px] px-6 py-3.5 sm:px-7 sm:py-4 rounded-full font-label-bold text-base sm:text-lg border border-primary/20 text-primary hover:bg-primary/5 active:scale-95 transition-all duration-300 inline-flex items-center justify-center gap-2">
-                    <span>Explore Flavours</span>
-                </a>
-            </div>
-
-            <!-- Social Proof / Customer Reviews -->
-            <div class="pt-4 sm:pt-6 border-t border-primary/10 flex items-center gap-3 sm:gap-4 justify-center lg:justify-start">
-                <div class="flex items-center -space-x-2">
-                    <img class="w-8 h-8 sm:w-9 sm:h-9 rounded-full border-2 border-[#fff8f6] object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Customer"/>
-                    <img class="w-8 h-8 sm:w-9 sm:h-9 rounded-full border-2 border-[#fff8f6] object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80" alt="Customer"/>
-                    <img class="w-8 h-8 sm:w-9 sm:h-9 rounded-full border-2 border-[#fff8f6] object-cover" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80" alt="Customer"/>
-                </div>
-                <div class="text-left text-xs font-sans">
-                    <div class="flex items-center text-amber-600 gap-0.5 font-bold">
-                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                        <span class="text-on-surface ml-1">4.9 / 5</span>
+        <!-- ============================================ -->
+        <!-- CAKES & SHAKES PAGE                          -->
+        <!-- ============================================ -->
+        <div class="page-container active-page" id="cakes-page">
+            <!-- TopNavBar -->
+            <nav class="fixed top-0 left-0 w-full z-50 bg-[#fff8f6]/95 backdrop-blur-md border-b border-primary/10 shadow-sm transition-all duration-300"
+                id="main-nav">
+                <div
+                    class="max-w-7xl mx-auto flex justify-between items-center px-4 sm:px-6 md:px-margin py-3 md:py-base">
+                    <div class="font-headline-md text-3xl sm:text-headline-md text-primary hover:scale-105 transition-all duration-300 cursor-pointer"
+                        onclick="window.scrollTo({top:0, behavior:'smooth'})">
+                        Cakes &amp; Shakes
                     </div>
-                    <span class="text-on-surface-variant font-medium text-[11px] sm:text-xs">From 1,200+ celebratory reviews</span>
+                    <div class="hidden md:flex items-center gap-md">
+                        <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors hover:scale-105 duration-300"
+                            href="#what-we-craft">What We Craft</a>
+                        <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors hover:scale-105 duration-300"
+                            href="#cakes">Cakes</a>
+                        <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors hover:scale-105 duration-300"
+                            href="#shakes">Shakes</a>
+                        <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors hover:scale-105 duration-300"
+                            href="#about">About</a>
+                        <a class="font-body-md text-body-md text-[#C98A3D] hover:underline hover:text-[#b3772e] transition-colors cursor-pointer"
+                            onclick="switchTo('surprise')">Also by us: Surprise Studio &rarr;</a>
+                    </div>
+                    <div class="flex items-center gap-2 sm:gap-3">
+                        <a href="https://maps.app.goo.gl/MAoyBanSnWvVWghy8" target="_blank"
+                            class="hidden sm:inline-flex bg-secondary text-on-secondary px-5 py-2 sm:px-6 sm:py-2 rounded-full font-label-bold text-xs sm:text-label-bold shadow-creamy hover:-translate-y-0.5 hover:shadow-creamy-hover transition-all duration-300 border-b-2 border-primary/20">
+                            Book Now
+                        </a>
+                        <!-- Mobile Hamburger Button -->
+                        <button id="cakes-menu-btn" onclick="toggleCakesMenu()" aria-label="Toggle navigation menu"
+                            class="md:hidden p-2 rounded-lg text-primary hover:bg-primary/5 focus:outline-none flex items-center justify-center">
+                            <span class="material-symbols-outlined text-2xl" id="cakes-menu-icon">menu</span>
+                        </button>
+                    </div>
                 </div>
-            </div>
-        </div>
 
-        <!-- Hero Right Column: Clean Cake Showcase Card with Static Voted Badge -->
-        <div class="flex-1 relative w-full max-w-[280px] sm:max-w-sm md:max-w-md lg:max-w-lg mt-4 sm:mt-6 lg:mt-0 mx-auto">
-            <div class="relative w-full aspect-square rounded-2xl sm:rounded-3xl bg-surface border border-primary/10 shadow-creamy overflow-hidden">
-                <img class="w-full h-full object-cover" alt="A spectacular three-tiered celebration drip cake" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzHcYwgcaTGMHN9dGsL5I4rAA3qFvJSV-oH9LjN1VgMq0vDmXzDXkUV2wvehcv9hVnwH3eMFMY619bR5Lwu9LalrtFTs4hlgnRq7CBoAgJLSnplzuV2nsnllD9jtM15OOQ1x3eEl0u2Gl_OrAti9HGXXzpAxzWDQ8iweg-v76frDU8hXk1wKE_q6z7vjSUGGo8hqFjFCUi_bYMiEy37IlWXE6zvuYAIHmh8Kl7FUzEpUFXG7nN_iUc"/>
-                <!-- Floating Badge (Static, Classic) -->
-                <div class="absolute -top-2 -right-2 sm:-top-3 sm:-right-3 bg-tertiary text-on-tertiary w-20 h-20 sm:w-24 sm:h-24 rounded-full flex flex-col items-center justify-center text-center p-1.5 sm:p-2 shadow-lg rotate-12 border-2 border-background">
-                    <span class="font-label-bold text-[10px] sm:text-xs uppercase tracking-wider">Voted</span>
-                    <span class="font-headline-md text-xl sm:text-2xl leading-none mt-0.5">#1</span>
-                    <span class="font-body-md text-[9px] sm:text-[10px] leading-tight">in Town</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Drip Divider 1 -->
-<div class="w-full h-12 relative z-20 -mt-12 bg-transparent pointer-events-none">
-<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 1200 50">
-<path class="frosting-drip" d="M0,0 Q15,30 30,10 T60,20 T90,5 T120,40 T150,15 T180,35 T210,10 T240,25 T270,5 T300,30 T330,15 T360,45 T390,10 T420,30 T450,5 T480,25 T510,10 T540,40 T570,15 T600,30 T630,10 T660,20 T690,5 T720,35 T750,15 T780,40 T810,10 T840,25 T870,5 T900,30 T930,15 T960,45 T990,10 T1020,30 T1050,5 T1080,25 T1110,10 T1140,40 T1170,15 T1200,30 L1200,50 L0,50 Z"></path>
-</svg>
-</div>
-<!-- What We Craft Section -->
-<section class="bg-[#fdf2f5] px-4 sm:px-6 md:px-lg py-12 md:py-16 relative" id="what-we-craft">
-<div class="text-center mb-8 md:mb-12 relative z-10">
-<h2 class="font-display-lg-mobile md:text-display-lg-mobile text-3xl sm:text-display-lg-mobile text-primary inline-block relative">
-            What We Craft
-            <svg class="absolute -top-3 -right-8 sm:-top-4 sm:-right-10 w-8 h-8 sm:w-10 sm:h-10 text-secondary-container/80 rotate-12" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path></svg>
-</h2>
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto relative z-10">
-<!-- Card 1 -->
-<div class="bg-surface rounded-2xl shadow-creamy border border-primary/10 overflow-hidden transform hover:-translate-y-2 hover:shadow-2xl active:scale-[0.99] transition-all duration-300">
-<div class="w-full aspect-[4/3]">
-<img alt="Custom Cakes" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmCePFx9tOaEH4ju_Y1eyuAn6CGkvYp6uos5CZjDTjduXTYze7Lr79Q5NxHP2YwSO0JGUS5XFkCJUo-DdZuNZBCvMHU1vHLLfv4x9FNiK6kkyD0YArFaCODUWnRh2OETHoY0kVxMgD4X8VPKE484A7YZinNJ8NCeJHKQwdcctB4V6AYBXXT_aIw5z8oKpSr30KIeBplDgTb6lUorHg0qshPTB-CGl4SHhfSB0CiTa0jUT309V1FEOP"/>
-</div>
-<div class="p-5 sm:p-6 text-center">
-<h3 class="font-headline-md text-2xl sm:text-3xl text-primary mb-1 sm:mb-2">Custom Cakes</h3>
-<p class="font-body-md text-sm sm:text-base text-on-surface-variant">Centerpieces tailored for your wildest dreams.</p>
-</div>
-</div>
-<!-- Card 2 -->
-<div class="bg-surface rounded-2xl shadow-creamy border border-primary/10 overflow-hidden transform hover:-translate-y-2 hover:shadow-2xl active:scale-[0.99] transition-all duration-300 md:-translate-y-4">
-<div class="w-full aspect-[4/3]">
-<img alt="Milkshakes" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw3lsLxpAuIP4i4kTM9BaAKbseCmMGKKybpFP9Qzo6KRDCogkOL_XWcdCSe43mREPKMVO79cm6Y6Ox6fB_WFhwQl32p1Mb2QKzcAtH0GGZ3ViqzGUCzhqfSZIpfjEVyGzMAn3B-Wfj6_SO2QJlTaN2Hhh-0GQiijc2BcCieQz-UAeVmpFD2rNeBwv38m8w3Vh3Tgr7EbbY_RVchA_nHC9_TIbVADBeYjBvIU3_DtRpU2pdMB6riWrH"/>
-</div>
-<div class="p-5 sm:p-6 text-center">
-<h3 class="font-headline-md text-2xl sm:text-3xl text-primary mb-1 sm:mb-2">Milkshakes</h3>
-<p class="font-body-md text-sm sm:text-base text-on-surface-variant">Decadent, overflowing layers of sweet joy.</p>
-</div>
-</div>
-<!-- Card 3 -->
-<div class="bg-surface rounded-2xl shadow-creamy border border-primary/10 overflow-hidden transform hover:-translate-y-2 hover:shadow-2xl active:scale-[0.99] transition-all duration-300 sm:col-span-2 md:col-span-1">
-<div class="w-full aspect-[4/3]">
-<img alt="Cupcakes" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4kwxtJGwKVCs9TPEPgoKRslTF6xTubUYe73OLZIPUSJeH4QOm7ZqsilcMzpYW7oRagZCChzgG2iKJXNqUt4WNIrBXgLt2X7cSB4GlqJH5b3Yg5JYxSAVcpIGSa_NHGIC1WgCSqhzaHZXGJ0nTH0_oDx8Gs3yLwgZpZn5KTB3tyT7K4UCeh9TNaPD84GM0MPBZMqF7ThmFSygAI-wKlIFCNPdnT_w736Ent8YzPA_8jGN8sQE7lzec"/>
-</div>
-<div class="p-5 sm:p-6 text-center">
-<h3 class="font-headline-md text-2xl sm:text-3xl text-primary mb-1 sm:mb-2">Cupcakes</h3>
-<p class="font-body-md text-sm sm:text-base text-on-surface-variant">Bite-sized perfection in every flavor.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Gallery Section -->
-<section class="bg-[#fdf2f5] px-4 sm:px-6 md:px-lg py-10 md:py-12 relative overflow-hidden" id="cakes">
-<svg class="absolute top-10 right-10 w-24 h-24 text-tertiary/20 rotate-45 pointer-events-none hidden sm:block" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path><circle cx="2" cy="12" fill="#ffb867" r="3"></circle><circle cx="22" cy="12" fill="#a3defe" r="2"></circle><path d="M4 18 Q 8 22 12 18 T 20 18" fill="none" stroke="#fc6d9a" stroke-width="1.5"></path></svg>
-<div class="text-center mb-8 md:mb-10 relative z-10">
-<h2 class="font-display-lg-mobile text-3xl sm:text-display-lg-mobile text-primary inline-block relative">
-                    The Dessert Case
-                    <svg class="absolute -top-4 -left-8 sm:-top-6 sm:-left-10 w-8 h-8 sm:w-12 sm:h-12 text-secondary-container/60 -rotate-12" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"></path></svg>
-</h2>
-<p class="font-body-lg text-sm sm:text-body-lg text-on-surface-variant mt-1">A peek at our recent creations.</p>
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto items-center pb-6 md:pb-8">
-<!-- Gallery Item 1 -->
-<div class="bg-surface p-4 rounded-sm shadow-creamy border border-primary/20 transform rotate-0 sm:-rotate-3 hover:scale-105 hover:shadow-2xl hover:rotate-0 hover:z-20 active:scale-[0.98] transition-all duration-300 cursor-pointer relative md:translate-y-4">
-<div class="absolute -top-3 left-1/2 -translate-x-1/2 w-12 h-6 bg-[#ffddba]/80 shadow-sm z-10 rotate-2"></div>
-<div class="w-full aspect-[3/4] overflow-hidden bg-surface-variant mb-4">
-<img class="w-full h-full object-cover" alt="Princess Dream Cake" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmCePFx9tOaEH4ju_Y1eyuAn6CGkvYp6uos5CZjDTjduXTYze7Lr79Q5NxHP2YwSO0JGUS5XFkCJUo-DdZuNZBCvMHU1vHLLfv4x9FNiK6kkyD0YArFaCODUWnRh2OETHoY0kVxMgD4X8VPKE484A7YZinNJ8NCeJHKQwdcctB4V6AYBXXT_aIw5z8oKpSr30KIeBplDgTb6lUorHg0qshPTB-CGl4SHhfSB0CiTa0jUT309V1FEOP"/>
-</div>
-<h3 class="font-headline-md text-2xl text-primary text-center">Princess Dream</h3>
-</div>
-<!-- Gallery Item 2 -->
-<div class="bg-surface p-4 rounded-sm shadow-creamy border border-primary/20 transform rotate-0 sm:rotate-2 hover:scale-110 hover:shadow-2xl hover:rotate-0 hover:z-30 active:scale-[0.98] transition-all duration-300 cursor-pointer relative z-10 md:-translate-y-2">
-<div class="absolute -top-3 left-1/2 -translate-x-1/2 w-12 h-6 bg-[#ffddba]/80 shadow-sm z-10 -rotate-2"></div>
-<div class="w-full aspect-[3/4] overflow-hidden bg-surface-variant mb-4">
-<img class="w-full h-full object-cover" alt="Rustic Floral Cake" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlNjayL0rB_Gl6RwWOHPl0iwwQ764DcM2lE30QQs0yi5Ktmfb9DNqcMSQ81KcmgRPv--IJ1Kw9QN_NiwspENJXi_tN1Fn_-AxCn1CFj_NF1SkrKYt6mwwsi43b068AnmIOVTildmGeZQlKxI8421FZefldTbRSxCMBrJ1K-lB3g_qeIYMs9Vww5v0TPJDTKC5fOlfynATefARm6nKcPDo4N7_K9PwLw5UG2Q4rSDR_nhRVqUBE3whS"/>
-</div>
-<h3 class="font-headline-md text-2xl text-primary text-center">Rustic Floral</h3>
-</div>
-<!-- Gallery Item 3 -->
-<div class="bg-surface p-4 rounded-sm shadow-creamy border border-primary/20 transform rotate-0 sm:-rotate-2 hover:scale-105 hover:shadow-2xl hover:rotate-0 hover:z-20 active:scale-[0.98] transition-all duration-300 cursor-pointer relative md:translate-y-6">
-<div class="absolute -top-3 left-1/2 -translate-x-1/2 w-12 h-6 bg-[#ffddba]/80 shadow-sm z-10 rotate-1"></div>
-<div class="w-full aspect-[3/4] overflow-hidden bg-surface-variant mb-4">
-<img class="w-full h-full object-cover" alt="Super City Cake" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcgP1hy1Io-2BcIAidwt8TYeAN4K8V2q9UocJ2-qVzmqMgj2S94pbS1o1wNU7hkH8jV_asAr35u0auyRiKg7ejNyv6-2njZ1R54ifVDHBo7ZmQ0aXntJK3RFqG4ZPbXHwhJPzRCSksXpsfTs_gK-cg-JDyw2tlUtAL_9243brmD5-jkYIUpf8y9M0LgTq_55-AaCELWgHYgaPxggBmStJf3_D8NTmTzfI1VWXHVqBwNoGidTMN-ryL"/>
-</div>
-<h3 class="font-headline-md text-2xl text-primary text-center">Super City</h3>
-</div>
-<!-- Gallery Item 4 -->
-<div class="bg-surface p-4 rounded-sm shadow-creamy border border-primary/20 transform rotate-0 sm:rotate-3 hover:scale-105 hover:shadow-2xl hover:rotate-0 hover:z-20 active:scale-[0.98] transition-all duration-300 cursor-pointer relative md:-translate-y-4">
-<div class="absolute -top-3 left-1/2 -translate-x-1/2 w-12 h-6 bg-[#ffddba]/80 shadow-sm z-10 -rotate-1"></div>
-<div class="w-full aspect-[3/4] overflow-hidden bg-surface-variant mb-4">
-<img class="w-full h-full object-cover" alt="Fairy Tale Cake" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAES_B0hI5kTBe4-kh9RIs1dGu4Y3FKvimVDdKvIWEg8I7U_w4sDuWs-iH2uapNQ2l_C_fSYgrKiJtE3ge1-7he_rB7hZLkn01TBgNH_F-tF9KqAc61Ezx7HK7BLjpQ7jPz59oS0gIVhW7wqr-NWgDPfYdf4q8LDjK4ZfX5LE32udeZTEIZE61vTuwPsuO6sVioT8lTeO0Vtc7Q6qusrEdgTQifKfRYdvyyqXYQdhBik6-J5wlcUd5u"/>
-</div>
-<h3 class="font-headline-md text-2xl text-primary text-center">Fairy Tale</h3>
-</div>
-<!-- Gallery Item 5 -->
-<div class="bg-surface p-4 rounded-sm shadow-creamy border border-primary/20 transform rotate-0 sm:-rotate-1 hover:scale-110 hover:shadow-2xl hover:rotate-0 hover:z-30 active:scale-[0.98] transition-all duration-300 cursor-pointer relative z-10 md:translate-y-2">
-<div class="absolute -top-3 left-1/2 -translate-x-1/2 w-12 h-6 bg-[#ffddba]/80 shadow-sm z-10 rotate-3"></div>
-<div class="w-full aspect-[3/4] overflow-hidden bg-surface-variant mb-4">
-<img class="w-full h-full object-cover" alt="Naked Cake" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBt9-zWAD3EEEryfuZ2aHC9j1k4K303yOtr7i_b53EMeKL29T2_9k3FChpycNDI5qOl4M77DyIzc7xs7SQNu6l9Bnp05DTNXq0AeptgGrItBwbYYxb7Gn-HDyC33Vc8m8WjUTsVtIVHI0fo8xIoUIWPyNLLQqjZHaXXK7oEr3LqEsFC0zUV_F7emDTizHFmNMYmcChq3s3ieW49RT1_rCpWdYLCBtVeShZ4cdmf3XF3c_n43cLmbATh"/>
-</div>
-<h3 class="font-headline-md text-2xl text-primary text-center">Naked Cake</h3>
-</div>
-<!-- Gallery Item 6 -->
-<div class="bg-surface p-4 rounded-sm shadow-creamy border border-primary/20 transform rotate-0 sm:rotate-2 hover:scale-105 hover:shadow-2xl hover:rotate-0 hover:z-20 active:scale-[0.98] transition-all duration-300 cursor-pointer relative md:-translate-y-6">
-<div class="absolute -top-3 left-1/2 -translate-x-1/2 w-12 h-6 bg-[#ffddba]/80 shadow-sm z-10 -rotate-2"></div>
-<div class="w-full aspect-[3/4] overflow-hidden bg-surface-variant mb-4">
-<img class="w-full h-full object-cover" alt="Comic Blast Cake" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB46W-PcevdqRdIMM3bQNQAGs_T8wQWO398uslZeoqJyxWRI63tEc_xqssleV2FbSQtdEDS5i0So3haHvFeyaN049IeL8SzGGgMHR2e56AxkY_EW677Z6JnuBUwwcnYELFnCcgM5z2eoaOgnBbDSvw8yVayoq3mm_RH5ci5nTdmeJsjaxxCwPmmzdJL3XmXQZ-DxFnO_F-062ute33SCVNQM3q0X0cWONkZGP3v5AfB09mA3frv-WGh"/>
-</div>
-<h3 class="font-headline-md text-2xl text-primary text-center">Comic Blast</h3>
-</div>
-</div>
-</section>
-<!-- Drip Divider 2 -->
-<div class="w-full h-12 relative z-20 -mt-1 bg-transparent pointer-events-none">
-<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 1200 50">
-<path class="frosting-drip-mint" d="M0,0 Q20,35 40,15 T80,25 T120,5 T160,40 T200,20 T240,45 T280,10 T320,30 T360,5 T400,25 T440,10 T480,45 T520,15 T560,35 T600,10 T640,25 T680,5 T720,40 T760,20 T800,35 T840,10 T880,30 T920,5 T960,45 T1000,15 T1040,30 T1080,10 T1120,25 T1160,5 T1200,35 L1200,50 L0,50 Z"></path>
-</svg>
-</div>
-<!-- Shakes Gallery -->
-<section class="bg-[#f0faf8] px-4 sm:px-6 md:px-lg py-12 md:py-16 relative overflow-hidden" id="shakes">
-<div class="text-center mb-8 md:mb-10 relative z-10">
-<h2 class="font-display-lg-mobile text-3xl sm:text-display-lg-mobile text-primary inline-block relative">
-            Monster Shakes
-            <svg class="absolute -top-3 -right-8 sm:-top-4 sm:-right-12 w-8 h-8 sm:w-10 sm:h-10 text-secondary-container/80 rotate-12" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path></svg>
-</h2>
-<p class="font-body-lg text-sm sm:text-body-lg text-on-surface-variant mt-1">Sip into something spectacular.</p>
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto items-center pb-6 md:pb-8">
-<!-- Shake Item 1 -->
-<div class="bg-surface p-4 rounded-sm shadow-creamy border border-primary/20 transform rotate-0 sm:-rotate-3 hover:scale-105 hover:shadow-2xl hover:rotate-0 hover:z-20 active:scale-[0.98] transition-all duration-300 cursor-pointer relative md:translate-y-4">
-<div class="absolute -top-3 left-1/2 -translate-x-1/2 w-12 h-6 bg-[#ffddba]/80 shadow-sm z-10 rotate-2"></div>
-<div class="w-full aspect-[3/4] overflow-hidden bg-surface-variant mb-4">
-<img class="w-full h-full object-cover" alt="Vanilla Dream Shake" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4AOv5vIN2pNZbCOIMr9B08Ddl4ZrndxR_B4DlOIs6OZfvj60NFydeJj9Ce5kKa2mTL6v8R01aLu0g8ct9z1VjDfvWX5K5-mbyhqHNN2bpmAXJ1QPBdP4TFEOiSHtEAhP71kNbzTz8xL2RpbtoG27yC5A13Np2iWd68zyyamg7DtNqgIcIylP7F6rTrLU9vHKhOOKW6W7n-rVibPmGQ16hK9nlO6iMmSfGkJ3-7NqjNwwihZ9d0Xbo"/>
-</div>
-<h3 class="font-headline-md text-2xl text-primary text-center">Vanilla Dream</h3>
-</div>
-<!-- Shake Item 2 -->
-<div class="bg-surface p-4 rounded-sm shadow-creamy border border-primary/20 transform rotate-0 sm:rotate-2 hover:scale-110 hover:shadow-2xl hover:rotate-0 hover:z-30 active:scale-[0.98] transition-all duration-300 cursor-pointer relative z-10 md:-translate-y-2">
-<div class="absolute -top-3 left-1/2 -translate-x-1/2 w-12 h-6 bg-[#ffddba]/80 shadow-sm z-10 -rotate-2"></div>
-<div class="w-full aspect-[3/4] overflow-hidden bg-surface-variant mb-4">
-<img class="w-full h-full object-cover" alt="Strawberry Sparkle Shake" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRcBo7_9f16CGLwLWsuTLFYGeZQIOtKY7-1PV98sj2EpUpcIUAajeOl7D1h1ZZNPr8iLTVCE48W6G1ixukQVFroSB0nK6tepmqpt84fpYRaVm3MFHA598zXmn2R2oH_VKOUnd12_YWZLRqKY7vo2N4npcnikzuf3KRYJU4YdnsQWhPNeJ99-qgKxUOG9CuYTubTo1tapDwcs0y2RYkxG5lvsLrAtcTfqympsQemonspxgcUhuzLyq1"/>
-</div>
-<h3 class="font-headline-md text-2xl text-primary text-center">Strawberry Sparkle</h3>
-</div>
-<!-- Shake Item 3 -->
-<div class="bg-surface p-4 rounded-sm shadow-creamy border border-primary/20 transform rotate-0 sm:-rotate-2 hover:scale-105 hover:shadow-2xl hover:rotate-0 hover:z-20 active:scale-[0.98] transition-all duration-300 cursor-pointer relative md:translate-y-6 sm:col-span-2 md:col-span-1 max-w-sm mx-auto sm:max-w-none w-full">
-<div class="absolute -top-3 left-1/2 -translate-x-1/2 w-12 h-6 bg-[#ffddba]/80 shadow-sm z-10 rotate-1"></div>
-<div class="w-full aspect-[3/4] overflow-hidden bg-surface-variant mb-4">
-<img class="w-full h-full object-cover" alt="Choco Avalanche Shake" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw3lsLxpAuIP4i4kTM9BaAKbseCmMGKKybpFP9Qzo6KRDCogkOL_XWcdCSe43mREPKMVO79cm6Y6Ox6fB_WFhwQl32p1Mb2QKzcAtH0GGZ3ViqzGUCzhqfSZIpfjEVyGzMAn3B-Wfj6_SO2QJlTaN2Hhh-0GQiijc2BcCieQz-UAeVmpFD2rNeBwv38m8w3Vh3Tgr7EbbY_RVchA_nHC9_TIbVADBeYjBvIU3_DtRpU2pdMB6riWrH"/>
-</div>
-<h3 class="font-headline-md text-2xl text-primary text-center">Choco Avalanche</h3>
-</div>
-</div>
-</section>
-<!-- Drip Divider 3 -->
-<div class="w-full h-12 relative z-20 -mt-1 bg-transparent pointer-events-none">
-<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 1200 50">
-<path class="frosting-drip-cream" d="M0,0 Q15,30 30,10 T60,20 T90,5 T120,40 T150,15 T180,35 T210,10 T240,25 T270,5 T300,30 T330,15 T360,45 T390,10 T420,30 T450,5 T480,25 T510,10 T540,40 T570,15 T600,30 T630,10 T660,20 T690,5 T720,35 T750,15 T780,40 T810,10 T840,25 T870,5 T900,30 T930,15 T960,45 T990,10 T1020,30 T1050,5 T1080,25 T1110,10 T1140,40 T1170,15 T1200,30 L1200,50 L0,50 Z"></path>
-</svg>
-</div>
-<!-- Testimonials Strip -->
-<section class="bg-[#fff8f6] py-10 md:py-12 border-b border-primary/5">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-margin overflow-hidden">
-<div class="flex flex-col md:flex-row gap-4 sm:gap-6 justify-center items-stretch">
-<div class="bg-surface border-2 border-secondary-container rounded-xl p-5 sm:p-6 shadow-sm transform rotate-0 sm:-rotate-1 w-full max-w-md mx-auto md:max-w-sm">
-<div class="flex text-secondary mb-2">
-<span class="material-symbols-outlined" data-weight="fill">star</span>
-<span class="material-symbols-outlined" data-weight="fill">star</span>
-<span class="material-symbols-outlined" data-weight="fill">star</span>
-<span class="material-symbols-outlined" data-weight="fill">star</span>
-<span class="material-symbols-outlined" data-weight="fill">star</span>
-</div>
-<p class="font-headline-md text-xl sm:text-2xl text-primary mb-2">"The best Barbie cake my daughter could have dreamed of!"</p>
-<p class="font-body-md text-on-surface-variant text-xs sm:text-sm">- Sarah T.</p>
-</div>
-<div class="bg-surface border-2 border-tertiary-container/30 rounded-xl p-5 sm:p-6 shadow-sm transform rotate-0 sm:rotate-2 w-full max-w-md mx-auto md:max-w-sm md:-translate-y-4">
-<div class="flex text-secondary mb-2">
-<span class="material-symbols-outlined" data-weight="fill">star</span>
-<span class="material-symbols-outlined" data-weight="fill">star</span>
-<span class="material-symbols-outlined" data-weight="fill">star</span>
-<span class="material-symbols-outlined" data-weight="fill">star</span>
-<span class="material-symbols-outlined" data-weight="fill">star</span>
-</div>
-<p class="font-headline-md text-xl sm:text-2xl text-primary mb-2">"Those shakes are a work of art. Almost too pretty to eat!"</p>
-<p class="font-body-md text-on-surface-variant text-xs sm:text-sm">- James L.</p>
-</div>
-<div class="bg-surface border-2 border-secondary-container rounded-xl p-5 sm:p-6 shadow-sm transform rotate-0 sm:-rotate-2 w-full max-w-md mx-auto md:max-w-sm">
-<div class="flex text-secondary mb-2">
-<span class="material-symbols-outlined" data-weight="fill">star</span>
-<span class="material-symbols-outlined" data-weight="fill">star</span>
-<span class="material-symbols-outlined" data-weight="fill">star</span>
-<span class="material-symbols-outlined" data-weight="fill">star</span>
-<span class="material-symbols-outlined" data-weight="fill">star</span>
-</div>
-<p class="font-headline-md text-xl sm:text-2xl text-primary mb-2">"Our wedding cake was everything we wanted and more."</p>
-<p class="font-body-md text-on-surface-variant text-xs sm:text-sm">- Emily R.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- About Section -->
-<section class="py-12 md:py-16 px-4 sm:px-6 md:px-margin bg-[#fff8f6] relative overflow-hidden" id="about">
-<div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-10">
-<div class="flex-1 relative w-full max-w-sm sm:max-w-md mx-auto">
-<div class="rounded-2xl overflow-hidden border-4 border-surface shadow-creamy transform rotate-0 sm:-rotate-2">
-<img alt="About us" class="w-full h-auto object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZkroie0pKDw3T_-SOt2ozZ9rp9BpYL97ofusaKEzzfj_xV742PNHBpD1Ov5KS2JZN-eU6W4OSYv_TeKrc4NX0A_mfNrsygi5N8Ap7lCZEr85Lc5H1kFDy80_lhfhzOz6hOjZkKDMOr_SyvIya4xlY1EML15lhlgmrlYDv7tYheO4Y014WSN0H44eINyeztXpqLECBXdhDJE7CHXablrxgYaFIl8xjz5iaCV4yGZVDuBZwsSmHkNJg"/>
-</div>
-<svg class="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 w-12 h-12 sm:w-16 sm:h-16 text-tertiary-container/40 rotate-12 z-10 pointer-events-none" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path></svg>
-</div>
-<div class="flex-1 text-center md:text-left">
-<h2 class="font-display-lg-mobile text-3xl sm:text-display-lg-mobile text-primary mb-3 sm:mb-4">Baked with Love</h2>
-<p class="font-body-lg text-sm sm:text-body-lg text-on-surface-variant mb-4 sm:mb-6">
-                We're your local sweet spot, dedicated to crafting edible masterpieces. Every sprinkle, every swirl, and every slice is made right here in our neighborhood kitchen.
-            </p>
-<p class="font-body-md text-sm sm:text-base text-on-surface-variant">
-                Come say hi and grab a treat!
-            </p>
-</div>
-</div>
-</section>
-<!-- CTA Section -->
-<section class="py-12 md:py-16 px-4 sm:px-6 md:px-margin text-center bg-[#fff8f6]">
-<h2 class="font-display-lg-mobile md:font-display-lg text-3xl sm:text-display-lg-mobile md:text-display-lg text-primary mb-6 relative inline-block">
-                Ready for something sweet?
-                <svg class="absolute -bottom-3 -right-6 sm:-bottom-4 sm:right-0 w-6 h-6 sm:w-8 sm:h-8 text-secondary-container/80 rotate-45" fill="currentColor" viewbox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
-</h2>
-<div class="mt-4 flex justify-center">
-<button class="w-full sm:w-auto min-h-[48px] bg-primary text-on-primary px-8 py-4 rounded-full font-label-bold text-base sm:text-lg shadow-creamy hover:-translate-y-1 hover:shadow-creamy-hover active:scale-95 transition-all duration-300 border-b-2 border-primary-fixed/20 flex items-center justify-center gap-3">
-<svg class="lucide lucide-message-circle" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
-                    Book via WhatsApp
-                </button>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="w-full px-4 sm:px-6 md:px-margin py-8 md:py-10 flex flex-col items-center gap-6 text-center bg-[#4a2e23] border-t border-[#321910]">
-<div class="font-headline-md text-3xl sm:text-4xl text-[#fff8f6] mb-1 sm:mb-2">
-            Cakes &amp; Shakes
-        </div>
-<div class="flex flex-wrap justify-center gap-x-6 sm:gap-x-8 gap-y-3 sm:gap-y-4 mb-2 sm:mb-4 text-xs sm:text-sm">
-<a class="font-body-md text-[#e9e1de] hover:text-[#ffddba] underline decoration-dotted transition-all" href="#what-we-craft">What We Craft</a>
-<a class="font-body-md text-[#e9e1de] hover:text-[#ffddba] underline decoration-dotted transition-all" href="#cakes">Cakes</a>
-<a class="font-body-md text-[#e9e1de] hover:text-[#ffddba] underline decoration-dotted transition-all" href="#shakes">Shakes</a>
-<a class="font-body-md text-[#e9e1de] hover:text-[#ffddba] underline decoration-dotted transition-all" href="https://maps.app.goo.gl/MAoyBanSnWvVWghy8" target="_blank">📍 Find Us</a>
-</div>
-<p class="font-body-md text-body-md text-[#d4c3bd] text-xs sm:text-sm opacity-90 max-w-sm mx-auto">
-            © 2024 Cakes &amp; Shakes. Baked with love and a dash of sprinkles.
-        </p>
-</footer>
-</div><!-- End Cakes Page -->
-
-
-<!-- ============================================ -->
-<!-- SURPRISE STUDIO PAGE                         -->
-<!-- ============================================ -->
-<div class="page-container hidden-page ss-body" id="surprise-page">
-
-<!-- Surprise Studio Navbar -->
-<nav class="fixed top-0 left-0 w-full z-50 bg-[#24131f]/95 backdrop-blur-md border-b border-[#d7b36a]/10 transition-all duration-300" id="ss-nav">
-    <div class="max-w-7xl mx-auto flex justify-between items-center px-4 sm:px-6 md:px-12 py-3.5 md:py-4">
-        <div class="flex flex-col cursor-pointer" onclick="window.scrollTo({top:0, behavior:'smooth'})">
-            <span class="ss-label text-[8px] sm:text-[9px]" style="letter-spacing:0.15em;">A Neighborhood</span>
-            <span class="font-serif text-lg sm:text-xl text-[#f1e6d3] italic">Surprise Studio</span>
-        </div>
-        <div class="hidden md:flex items-center gap-8">
-            <a class="ss-nav-link" href="#ss-occasions">Occasions</a>
-            <a class="ss-nav-link" href="#ss-studio">The Studio</a>
-            <a class="ss-nav-link" href="#ss-testimonials">Notes from Guests</a>
-            <a class="ss-nav-link text-[#D4AF6A] hover:underline cursor-pointer" style="color: #D4AF6A;" onclick="switchTo('cakes')">Also by us: Cakes &amp; Shakes &rarr;</a>
-        </div>
-        <div class="flex items-center gap-2 sm:gap-3">
-            <a href="https://share.google/DHpeAj0b6yi6G7g2y" target="_blank" class="hidden sm:inline-flex ss-btn-outline text-[10px] py-2 px-4">
-                Make an Enquiry <span style="font-size:14px;">↗</span>
-            </a>
-            <!-- Mobile Hamburger Button -->
-            <button id="ss-menu-btn" onclick="toggleSSMenu()" aria-label="Toggle navigation menu" class="md:hidden p-2 rounded-lg text-[#d7b36a] hover:bg-white/5 focus:outline-none flex items-center justify-center">
-                <span class="material-symbols-outlined text-2xl" id="ss-menu-icon">menu</span>
-            </button>
-        </div>
-    </div>
-
-    <!-- Mobile Dropdown Menu -->
-    <div id="ss-mobile-menu" class="hidden md:hidden bg-[#24131f] border-b border-[#d7b36a]/20 px-5 py-5 shadow-2xl transition-all duration-300">
-        <div class="flex flex-col gap-3">
-            <a class="ss-nav-link text-xs py-2.5 border-b border-white/5" href="#ss-occasions" onclick="toggleSSMenu()">Occasions</a>
-            <a class="ss-nav-link text-xs py-2.5 border-b border-white/5" href="#ss-studio" onclick="toggleSSMenu()">The Studio</a>
-            <a class="ss-nav-link text-xs py-2.5 border-b border-white/5" href="#ss-testimonials" onclick="toggleSSMenu()">Notes from Guests</a>
-            <a class="ss-nav-link text-[11px] py-2.5 border-b border-white/5 text-[#D4AF6A] cursor-pointer" style="color: #D4AF6A;" onclick="toggleSSMenu(); switchTo('cakes')">Also by us: Cakes &amp; Shakes &rarr;</a>
-            <div class="pt-2">
-                <a href="https://share.google/DHpeAj0b6yi6G7g2y" target="_blank" class="w-full ss-btn-outline text-center justify-center py-3 text-[11px] block">
-                    Make an Enquiry <span>↗</span>
-                </a>
-            </div>
-        </div>
-    </div>
-</nav>
-
-<main class="pt-0">
-
-<!-- ===== HERO SECTION ===== -->
-<section class="ss-hero min-h-screen relative flex items-end">
-    <div class="ss-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=1600&auto=format&fit=crop&q=80');"></div>
-    <div class="ss-hero-overlay"></div>
-    <div class="ss-hero-content w-full px-4 sm:px-6 md:px-12 pb-12 sm:pb-16 pt-28 sm:pt-36 md:pt-40">
-        <div class="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
-            <div class="w-8 sm:w-10 h-[1px] bg-[#d7b36a]"></div>
-            <span class="ss-label text-[10px] sm:text-[11px]">Est. in the Neighborhood, 2018</span>
-        </div>
-        <h1 class="ss-heading text-5xl sm:text-6xl md:text-8xl leading-[0.92] sm:leading-[0.88] mb-6 md:mb-8 max-w-3xl">
-            Make every<br/><em>celebration</em><br/>special.
-        </h1>
-        <p class="ss-body-text text-base sm:text-lg max-w-lg mb-8 md:mb-10">
-            A private celebration space for the people and milestones worth gathering around.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
-            <a href="https://share.google/DHpeAj0b6yi6G7g2y" target="_blank" class="ss-btn-primary w-full sm:w-auto justify-center min-h-[48px]">Plan your celebration <span>↗</span></a>
-            <a href="#ss-occasions" class="ss-btn-outline w-full sm:w-auto justify-center min-h-[48px]">Explore the occasions <span>↓</span></a>
-        </div>
-        <!-- Bottom bar -->
-        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mt-12 sm:mt-16 pt-4 border-t border-[#765b55]/30">
-            <span class="ss-label text-[9px] sm:text-[10px] text-[#987d7b]">Hyderabad, India</span>
-            <span class="ss-label text-[9px] sm:text-[10px] text-[#987d7b]">Scroll to enter ↓</span>
-        </div>
-    </div>
-</section>
-
-<!-- ===== MARQUEE STRIP ===== -->
-<section class="bg-[#1b1018] border-y border-[#765b55]/20 py-3 sm:py-5 overflow-hidden">
-    <div class="marquee-track flex items-center whitespace-nowrap" style="width: max-content;">
-        <span class="font-serif italic text-lg sm:text-2xl text-[#d7b36a] mx-4 sm:mx-8">Celebrate with the people you love</span>
-        <span class="text-[#765b55] mx-2 sm:mx-4">·</span>
-        <span class="font-serif italic text-lg sm:text-2xl text-[#d7b36a] mx-4 sm:mx-8">Good times happen here</span>
-        <span class="text-[#765b55] mx-2 sm:mx-4">·</span>
-        <span class="font-serif italic text-lg sm:text-2xl text-[#d7b36a] mx-4 sm:mx-8">Birthdays, surprises &amp; milestones</span>
-        <span class="text-[#765b55] mx-2 sm:mx-4">·</span>
-        <span class="font-serif italic text-lg sm:text-2xl text-[#d7b36a] mx-4 sm:mx-8">Your private party space</span>
-        <span class="text-[#765b55] mx-2 sm:mx-4">·</span>
-        <span class="font-serif italic text-lg sm:text-2xl text-[#d7b36a] mx-4 sm:mx-8">Celebrate with the people you love</span>
-        <span class="text-[#765b55] mx-2 sm:mx-4">·</span>
-        <span class="font-serif italic text-lg sm:text-2xl text-[#d7b36a] mx-4 sm:mx-8">Good times happen here</span>
-        <span class="text-[#765b55] mx-2 sm:mx-4">·</span>
-        <span class="font-serif italic text-lg sm:text-2xl text-[#d7b36a] mx-4 sm:mx-8">Birthdays, surprises &amp; milestones</span>
-        <span class="text-[#765b55] mx-2 sm:mx-4">·</span>
-        <span class="font-serif italic text-lg sm:text-2xl text-[#d7b36a] mx-4 sm:mx-8">Your private party space</span>
-    </div>
-</section>
-
-<!-- ===== THE FEELING ===== -->
-<section class="bg-[#24131f] px-4 sm:px-6 md:px-12 py-16 sm:py-20 md:py-32">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-8 sm:gap-12 md:gap-20">
-        <div class="flex-shrink-0">
-            <span class="ss-label">The Feeling</span>
-            <div class="w-8 h-[2px] bg-[#d7b36a] mt-2 sm:mt-3"></div>
-        </div>
-        <div>
-            <h2 class="ss-heading text-3xl sm:text-4xl md:text-6xl leading-[1.05] sm:leading-[1] mb-6 sm:mb-8">
-                Some moments deserve more than a reservation. <em>They deserve a setting.</em>
-            </h2>
-            <p class="ss-body-text text-sm sm:text-base max-w-xl">
-                We turn our studio into the exact right room for your story — warm, welcoming, deeply personal, and designed for genuine celebration.
-            </p>
-        </div>
-    </div>
-</section>
-
-<!-- ===== THE OCCASIONS ===== -->
-<section class="bg-[#2b1724] px-4 sm:px-6 md:px-12 py-14 sm:py-20 md:py-28" id="ss-occasions">
-    <div class="max-w-6xl mx-auto">
-        <span class="ss-label">Pick your beautiful excuse</span>
-        <h2 class="ss-heading text-3xl sm:text-4xl md:text-6xl mt-3 sm:mt-4 mb-8 sm:mb-10">The occasions</h2>
-        
-        <div class="flex flex-col md:flex-row gap-8 sm:gap-10 md:gap-16">
-            <!-- Left: Accordion -->
-            <div class="flex-1">
-                <div class="occasion-item active py-4 sm:py-6" data-occasion="0" onclick="selectOccasion(0)">
-                    <div class="flex items-start gap-4">
-                        <span class="ss-label text-[#d7b36a] mt-1.5 sm:mt-2">01</span>
-                        <div class="flex-1">
-                            <div class="flex items-center justify-between">
-                                <h3 class="occasion-title font-serif text-2xl sm:text-3xl text-[#f1e6d3] transition-colors">The birthday party</h3>
-                                <span class="text-[#d7b36a]">↗</span>
-                            </div>
-                            <div class="occasion-desc">
-                                <p class="ss-body-text text-sm mt-2 sm:mt-3">The kind of birthday that becomes the joyful story everyone talks about all year.</p>
-                            </div>
+                <!-- Mobile Dropdown Menu -->
+                <div id="cakes-mobile-menu"
+                    class="hidden md:hidden bg-[#fff8f6] border-b border-primary/10 px-5 py-5 shadow-lg transition-all duration-300">
+                    <div class="flex flex-col gap-3">
+                        <a class="font-body-md text-base text-on-surface-variant hover:text-primary py-2 border-b border-primary/5"
+                            href="#what-we-craft" onclick="toggleCakesMenu()">What We Craft</a>
+                        <a class="font-body-md text-base text-on-surface-variant hover:text-primary py-2 border-b border-primary/5"
+                            href="#cakes" onclick="toggleCakesMenu()">Cakes</a>
+                        <a class="font-body-md text-base text-on-surface-variant hover:text-primary py-2 border-b border-primary/5"
+                            href="#shakes" onclick="toggleCakesMenu()">Shakes</a>
+                        <a class="font-body-md text-base text-on-surface-variant hover:text-primary py-2 border-b border-primary/5"
+                            href="#about" onclick="toggleCakesMenu()">About</a>
+                        <a class="font-body-md text-sm font-semibold text-[#C98A3D] hover:underline py-2.5 border-b border-primary/5 cursor-pointer"
+                            onclick="toggleCakesMenu(); switchTo('surprise')">Also by us: Surprise Studio &rarr;</a>
+                        <div class="pt-2">
+                            <a href="https://maps.app.goo.gl/MAoyBanSnWvVWghy8" target="_blank"
+                                class="w-full bg-secondary text-on-secondary py-3 rounded-full font-label-bold text-center block shadow-creamy border-b-2 border-primary/20">
+                                Book Now
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="occasion-item py-4 sm:py-6" data-occasion="1" onclick="selectOccasion(1)">
-                    <div class="flex items-start gap-4">
-                        <span class="ss-label text-[#765b55] mt-1.5 sm:mt-2">02</span>
-                        <div class="flex-1">
-                            <div class="flex items-center justify-between">
-                                <h3 class="occasion-title font-serif text-2xl sm:text-3xl text-[#f1e6d3] transition-colors">The proposal &amp; surprise</h3>
-                                <span class="text-[#765b55]">↗</span>
+            </nav>
+
+            <main class="pt-[68px] md:pt-[80px]">
+                <!-- Hero Section -->
+                <section
+                    class="min-h-[560px] md:min-h-[640px] bg-[#fff8f6] flex flex-col justify-center px-4 sm:px-6 md:px-lg relative pt-6 sm:pt-8 md:pt-10 pb-12 sm:pb-16 md:pb-20 overflow-hidden">
+                    <div
+                        class="w-full max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-12 lg:gap-16 z-10">
+                        <!-- Hero Left Column: Clean, Large Typography, CTAs & Understated Social Proof -->
+                        <div class="flex-1 text-center lg:text-left z-10 w-full">
+                            <!-- Primary Headline (Magnified text sizing, clean & elegant) -->
+                            <h1
+                                class="font-display-lg-mobile md:font-display-lg text-4xl sm:text-5xl md:text-7xl lg:text-[88px] text-primary mb-4 sm:mb-6 leading-[1.1] sm:leading-[1.08] tracking-tight">
+                                Cakes &amp; Shakes<br />
+                                <span class="italic font-serif text-secondary">worth celebrating.</span>
+                            </h1>
+
+                            <!-- Descriptive Subtitle -->
+                            <p
+                                class="font-body-lg text-base sm:text-lg md:text-xl text-on-surface-variant leading-relaxed font-sans max-w-lg mx-auto lg:mx-0 mb-6 sm:mb-8">
+                                Handcrafted layers of joy for your most special moments. Baked with love, designed to
+                                delight.
+                            </p>
+
+                            <!-- CTA Buttons -->
+                            <div
+                                class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 mb-6 sm:mb-8 w-full">
+                                <a href="https://maps.app.goo.gl/MAoyBanSnWvVWghy8" target="_blank"
+                                    class="w-full sm:w-auto min-h-[48px] bg-secondary-container text-on-secondary-container px-6 py-3.5 sm:px-8 sm:py-4 rounded-full font-label-bold text-base sm:text-lg shadow-creamy hover:-translate-y-0.5 hover:shadow-creamy-hover active:scale-95 transition-all duration-300 border-b-2 border-primary-container/20 inline-flex items-center justify-center gap-2 group">
+                                    <span>Book Your Cake</span>
+                                    <span
+                                        class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                                </a>
+                                <a href="#what-we-craft"
+                                    class="w-full sm:w-auto min-h-[48px] px-6 py-3.5 sm:px-7 sm:py-4 rounded-full font-label-bold text-base sm:text-lg border border-primary/20 text-primary hover:bg-primary/5 active:scale-95 transition-all duration-300 inline-flex items-center justify-center gap-2">
+                                    <span>Explore Flavours</span>
+                                </a>
                             </div>
-                            <div class="occasion-desc">
-                                <p class="ss-body-text text-sm mt-2 sm:mt-3">A heartwarming ambiance designed to create a memory you'll cherish forever.</p>
+
+                            <!-- Social Proof / Customer Reviews -->
+                            <div
+                                class="pt-4 sm:pt-6 border-t border-primary/10 flex items-center gap-3 sm:gap-4 justify-center lg:justify-start">
+                                <div class="flex items-center -space-x-2">
+                                    <img class="w-8 h-8 sm:w-9 sm:h-9 rounded-full border-2 border-[#fff8f6] object-cover"
+                                        src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80"
+                                        alt="Customer" />
+                                    <img class="w-8 h-8 sm:w-9 sm:h-9 rounded-full border-2 border-[#fff8f6] object-cover"
+                                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80"
+                                        alt="Customer" />
+                                    <img class="w-8 h-8 sm:w-9 sm:h-9 rounded-full border-2 border-[#fff8f6] object-cover"
+                                        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80"
+                                        alt="Customer" />
+                                </div>
+                                <div class="text-left text-xs font-sans">
+                                    <div class="flex items-center text-amber-600 gap-0.5 font-bold">
+                                        <span>â˜…</span><span>â˜…</span><span>â˜…</span><span>â˜…</span><span>â˜…</span>
+                                        <span class="text-on-surface ml-1">4.9 / 5</span>
+                                    </div>
+                                    <span class="text-on-surface-variant font-medium text-[11px] sm:text-xs">From 1,200+
+                                        celebratory reviews</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hero Right Column: Clean Cake Showcase Card with Static Voted Badge -->
+                        <div
+                            class="flex-1 relative w-full max-w-[280px] sm:max-w-sm md:max-w-md lg:max-w-lg mt-4 sm:mt-6 lg:mt-0 mx-auto">
+                            <div
+                                class="relative w-full aspect-square rounded-2xl sm:rounded-3xl bg-surface border border-primary/10 shadow-creamy overflow-hidden">
+                                <img class="w-full h-full object-cover"
+                                    alt="A spectacular three-tiered celebration drip cake"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzHcYwgcaTGMHN9dGsL5I4rAA3qFvJSV-oH9LjN1VgMq0vDmXzDXkUV2wvehcv9hVnwH3eMFMY619bR5Lwu9LalrtFTs4hlgnRq7CBoAgJLSnplzuV2nsnllD9jtM15OOQ1x3eEl0u2Gl_OrAti9HGXXzpAxzWDQ8iweg-v76frDU8hXk1wKE_q6z7vjSUGGo8hqFjFCUi_bYMiEy37IlWXE6zvuYAIHmh8Kl7FUzEpUFXG7nN_iUc" />
+                                <!-- Floating Badge (Static, Classic) -->
+                                <div
+                                    class="absolute -top-2 -right-2 sm:-top-3 sm:-right-3 bg-tertiary text-on-tertiary w-20 h-20 sm:w-24 sm:h-24 rounded-full flex flex-col items-center justify-center text-center p-1.5 sm:p-2 shadow-lg rotate-12 border-2 border-background">
+                                    <span
+                                        class="font-label-bold text-[10px] sm:text-xs uppercase tracking-wider">Voted</span>
+                                    <span class="font-headline-md text-xl sm:text-2xl leading-none mt-0.5">#1</span>
+                                    <span class="font-body-md text-[9px] sm:text-[10px] leading-tight">in Town</span>
+                                </div>
                             </div>
                         </div>
                     </div>
+                </section>
+                <!-- Drip Divider 1 -->
+                <div class="w-full h-12 relative z-20 -mt-12 bg-transparent pointer-events-none">
+                    <svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 1200 50">
+                        <path class="frosting-drip"
+                            d="M0,0 Q15,30 30,10 T60,20 T90,5 T120,40 T150,15 T180,35 T210,10 T240,25 T270,5 T300,30 T330,15 T360,45 T390,10 T420,30 T450,5 T480,25 T510,10 T540,40 T570,15 T600,30 T630,10 T660,20 T690,5 T720,35 T750,15 T780,40 T810,10 T840,25 T870,5 T900,30 T930,15 T960,45 T990,10 T1020,30 T1050,5 T1080,25 T1110,10 T1140,40 T1170,15 T1200,30 L1200,50 L0,50 Z">
+                        </path>
+                    </svg>
                 </div>
-                <div class="occasion-item py-4 sm:py-6" data-occasion="2" onclick="selectOccasion(2)">
-                    <div class="flex items-start gap-4">
-                        <span class="ss-label text-[#765b55] mt-1.5 sm:mt-2">03</span>
-                        <div class="flex-1">
-                            <div class="flex items-center justify-between">
-                                <h3 class="occasion-title font-serif text-2xl sm:text-3xl text-[#f1e6d3] transition-colors">The anniversary</h3>
-                                <span class="text-[#765b55]">↗</span>
+                <!-- What We Craft Section -->
+                <section class="bg-[#fdf2f5] px-4 sm:px-6 md:px-lg py-12 md:py-16 relative" id="what-we-craft">
+                    <div class="text-center mb-8 md:mb-12 relative z-10">
+                        <h2
+                            class="font-display-lg-mobile md:text-display-lg-mobile text-3xl sm:text-display-lg-mobile text-primary inline-block relative">
+                            What We Craft
+                            <svg class="absolute -top-3 -right-8 sm:-top-4 sm:-right-10 w-8 h-8 sm:w-10 sm:h-10 text-secondary-container/80 rotate-12"
+                                fill="currentColor" viewbox="0 0 24 24">
+                                <path
+                                    d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z">
+                                </path>
+                            </svg>
+                        </h2>
+                    </div>
+                    <div
+                        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto relative z-10">
+                        <!-- Card 1 -->
+                        <div
+                            class="bg-surface rounded-2xl shadow-creamy border border-primary/10 overflow-hidden transform hover:-translate-y-2 hover:shadow-2xl active:scale-[0.99] transition-all duration-300">
+                            <div class="w-full aspect-[4/3]">
+                                <img alt="Custom Cakes" class="w-full h-full object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmCePFx9tOaEH4ju_Y1eyuAn6CGkvYp6uos5CZjDTjduXTYze7Lr79Q5NxHP2YwSO0JGUS5XFkCJUo-DdZuNZBCvMHU1vHLLfv4x9FNiK6kkyD0YArFaCODUWnRh2OETHoY0kVxMgD4X8VPKE484A7YZinNJ8NCeJHKQwdcctB4V6AYBXXT_aIw5z8oKpSr30KIeBplDgTb6lUorHg0qshPTB-CGl4SHhfSB0CiTa0jUT309V1FEOP" />
                             </div>
-                            <div class="occasion-desc">
-                                <p class="ss-body-text text-sm mt-2 sm:mt-3">Because celebrating your journey together deserves an intimate, magical setting.</p>
+                            <div class="p-5 sm:p-6 text-center">
+                                <h3 class="font-headline-md text-2xl sm:text-3xl text-primary mb-1 sm:mb-2">Custom Cakes
+                                </h3>
+                                <p class="font-body-md text-sm sm:text-base text-on-surface-variant">Centerpieces
+                                    tailored for your wildest dreams.</p>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div
+                            class="bg-surface rounded-2xl shadow-creamy border border-primary/10 overflow-hidden transform hover:-translate-y-2 hover:shadow-2xl active:scale-[0.99] transition-all duration-300 md:-translate-y-4">
+                            <div class="w-full aspect-[4/3]">
+                                <img alt="Milkshakes" class="w-full h-full object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw3lsLxpAuIP4i4kTM9BaAKbseCmMGKKybpFP9Qzo6KRDCogkOL_XWcdCSe43mREPKMVO79cm6Y6Ox6fB_WFhwQl32p1Mb2QKzcAtH0GGZ3ViqzGUCzhqfSZIpfjEVyGzMAn3B-Wfj6_SO2QJlTaN2Hhh-0GQiijc2BcCieQz-UAeVmpFD2rNeBwv38m8w3Vh3Tgr7EbbY_RVchA_nHC9_TIbVADBeYjBvIU3_DtRpU2pdMB6riWrH" />
+                            </div>
+                            <div class="p-5 sm:p-6 text-center">
+                                <h3 class="font-headline-md text-2xl sm:text-3xl text-primary mb-1 sm:mb-2">Milkshakes
+                                </h3>
+                                <p class="font-body-md text-sm sm:text-base text-on-surface-variant">Decadent,
+                                    overflowing layers of sweet joy.</p>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div
+                            class="bg-surface rounded-2xl shadow-creamy border border-primary/10 overflow-hidden transform hover:-translate-y-2 hover:shadow-2xl active:scale-[0.99] transition-all duration-300 sm:col-span-2 md:col-span-1">
+                            <div class="w-full aspect-[4/3]">
+                                <img alt="Cupcakes" class="w-full h-full object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4kwxtJGwKVCs9TPEPgoKRslTF6xTubUYe73OLZIPUSJeH4QOm7ZqsilcMzpYW7oRagZCChzgG2iKJXNqUt4WNIrBXgLt2X7cSB4GlqJH5b3Yg5JYxSAVcpIGSa_NHGIC1WgCSqhzaHZXGJ0nTH0_oDx8Gs3yLwgZpZn5KTB3tyT7K4UCeh9TNaPD84GM0MPBZMqF7ThmFSygAI-wKlIFCNPdnT_w736Ent8YzPA_8jGN8sQE7lzec" />
+                            </div>
+                            <div class="p-5 sm:p-6 text-center">
+                                <h3 class="font-headline-md text-2xl sm:text-3xl text-primary mb-1 sm:mb-2">Cupcakes
+                                </h3>
+                                <p class="font-body-md text-sm sm:text-base text-on-surface-variant">Bite-sized
+                                    perfection in every flavor.</p>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="occasion-item py-4 sm:py-6" data-occasion="3" onclick="selectOccasion(3)">
-                    <div class="flex items-start gap-4">
-                        <span class="ss-label text-[#765b55] mt-1.5 sm:mt-2">04</span>
-                        <div class="flex-1">
-                            <div class="flex items-center justify-between">
-                                <h3 class="occasion-title font-serif text-2xl sm:text-3xl text-[#f1e6d3] transition-colors">The new chapter</h3>
-                                <span class="text-[#765b55]">↗</span>
+                </section>
+                <!-- Gallery Section -->
+                <section class="bg-[#fdf2f5] px-4 sm:px-6 md:px-lg py-10 md:py-12 relative overflow-hidden" id="cakes">
+                    <svg class="absolute top-10 right-10 w-24 h-24 text-tertiary/20 rotate-45 pointer-events-none hidden sm:block"
+                        fill="currentColor" viewbox="0 0 24 24">
+                        <path
+                            d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z">
+                        </path>
+                        <circle cx="2" cy="12" fill="#ffb867" r="3"></circle>
+                        <circle cx="22" cy="12" fill="#a3defe" r="2"></circle>
+                        <path d="M4 18 Q 8 22 12 18 T 20 18" fill="none" stroke="#fc6d9a" stroke-width="1.5"></path>
+                    </svg>
+                    <div class="text-center mb-8 md:mb-10 relative z-10">
+                        <h2
+                            class="font-display-lg-mobile text-3xl sm:text-display-lg-mobile text-primary inline-block relative">
+                            The Dessert Case
+                            <svg class="absolute -top-4 -left-8 sm:-top-6 sm:-left-10 w-8 h-8 sm:w-12 sm:h-12 text-secondary-container/60 -rotate-12"
+                                fill="currentColor" viewbox="0 0 24 24">
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z">
+                                </path>
+                            </svg>
+                        </h2>
+                        <p class="font-body-lg text-sm sm:text-body-lg text-on-surface-variant mt-1">A peek at our
+                            recent creations.</p>
+                    </div>
+                    <div
+                        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto items-center pb-6 md:pb-8">
+                        <!-- Gallery Item 1 -->
+                        <div
+                            class="bg-surface p-4 rounded-sm shadow-creamy border border-primary/20 transform rotate-0 sm:-rotate-3 hover:scale-105 hover:shadow-2xl hover:rotate-0 hover:z-20 active:scale-[0.98] transition-all duration-300 cursor-pointer relative md:translate-y-4">
+                            <div
+                                class="absolute -top-3 left-1/2 -translate-x-1/2 w-12 h-6 bg-[#ffddba]/80 shadow-sm z-10 rotate-2">
                             </div>
-                            <div class="occasion-desc">
-                                <p class="ss-body-text text-sm mt-2 sm:mt-3">Baby showers, farewells, reunions &amp; milestones — every new beginning deserves a gathering.</p>
+                            <div class="w-full aspect-[3/4] overflow-hidden bg-surface-variant mb-4">
+                                <img class="w-full h-full object-cover" alt="Princess Dream Cake"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmCePFx9tOaEH4ju_Y1eyuAn6CGkvYp6uos5CZjDTjduXTYze7Lr79Q5NxHP2YwSO0JGUS5XFkCJUo-DdZuNZBCvMHU1vHLLfv4x9FNiK6kkyD0YArFaCODUWnRh2OETHoY0kVxMgD4X8VPKE484A7YZinNJ8NCeJHKQwdcctB4V6AYBXXT_aIw5z8oKpSr30KIeBplDgTb6lUorHg0qshPTB-CGl4SHhfSB0CiTa0jUT309V1FEOP" />
+                            </div>
+                            <h3 class="font-headline-md text-2xl text-primary text-center">Princess Dream</h3>
+                        </div>
+                        <!-- Gallery Item 2 -->
+                        <div
+                            class="bg-surface p-4 rounded-sm shadow-creamy border border-primary/20 transform rotate-0 sm:rotate-2 hover:scale-110 hover:shadow-2xl hover:rotate-0 hover:z-30 active:scale-[0.98] transition-all duration-300 cursor-pointer relative z-10 md:-translate-y-2">
+                            <div
+                                class="absolute -top-3 left-1/2 -translate-x-1/2 w-12 h-6 bg-[#ffddba]/80 shadow-sm z-10 -rotate-2">
+                            </div>
+                            <div class="w-full aspect-[3/4] overflow-hidden bg-surface-variant mb-4">
+                                <img class="w-full h-full object-cover" alt="Rustic Floral Cake"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlNjayL0rB_Gl6RwWOHPl0iwwQ764DcM2lE30QQs0yi5Ktmfb9DNqcMSQ81KcmgRPv--IJ1Kw9QN_NiwspENJXi_tN1Fn_-AxCn1CFj_NF1SkrKYt6mwwsi43b068AnmIOVTildmGeZQlKxI8421FZefldTbRSxCMBrJ1K-lB3g_qeIYMs9Vww5v0TPJDTKC5fOlfynATefARm6nKcPDo4N7_K9PwLw5UG2Q4rSDR_nhRVqUBE3whS" />
+                            </div>
+                            <h3 class="font-headline-md text-2xl text-primary text-center">Rustic Floral</h3>
+                        </div>
+                        <!-- Gallery Item 3 -->
+                        <div
+                            class="bg-surface p-4 rounded-sm shadow-creamy border border-primary/20 transform rotate-0 sm:-rotate-2 hover:scale-105 hover:shadow-2xl hover:rotate-0 hover:z-20 active:scale-[0.98] transition-all duration-300 cursor-pointer relative md:translate-y-6">
+                            <div
+                                class="absolute -top-3 left-1/2 -translate-x-1/2 w-12 h-6 bg-[#ffddba]/80 shadow-sm z-10 rotate-1">
+                            </div>
+                            <div class="w-full aspect-[3/4] overflow-hidden bg-surface-variant mb-4">
+                                <img class="w-full h-full object-cover" alt="Super City Cake"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcgP1hy1Io-2BcIAidwt8TYeAN4K8V2q9UocJ2-qVzmqMgj2S94pbS1o1wNU7hkH8jV_asAr35u0auyRiKg7ejNyv6-2njZ1R54ifVDHBo7ZmQ0aXntJK3RFqG4ZPbXHwhJPzRCSksXpsfTs_gK-cg-JDyw2tlUtAL_9243brmD5-jkYIUpf8y9M0LgTq_55-AaCELWgHYgaPxggBmStJf3_D8NTmTzfI1VWXHVqBwNoGidTMN-ryL" />
+                            </div>
+                            <h3 class="font-headline-md text-2xl text-primary text-center">Super City</h3>
+                        </div>
+                        <!-- Gallery Item 4 -->
+                        <div
+                            class="bg-surface p-4 rounded-sm shadow-creamy border border-primary/20 transform rotate-0 sm:rotate-3 hover:scale-105 hover:shadow-2xl hover:rotate-0 hover:z-20 active:scale-[0.98] transition-all duration-300 cursor-pointer relative md:-translate-y-4">
+                            <div
+                                class="absolute -top-3 left-1/2 -translate-x-1/2 w-12 h-6 bg-[#ffddba]/80 shadow-sm z-10 -rotate-1">
+                            </div>
+                            <div class="w-full aspect-[3/4] overflow-hidden bg-surface-variant mb-4">
+                                <img class="w-full h-full object-cover" alt="Fairy Tale Cake"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAES_B0hI5kTBe4-kh9RIs1dGu4Y3FKvimVDdKvIWEg8I7U_w4sDuWs-iH2uapNQ2l_C_fSYgrKiJtE3ge1-7he_rB7hZLkn01TBgNH_F-tF9KqAc61Ezx7HK7BLjpQ7jPz59oS0gIVhW7wqr-NWgDPfYdf4q8LDjK4ZfX5LE32udeZTEIZE61vTuwPsuO6sVioT8lTeO0Vtc7Q6qusrEdgTQifKfRYdvyyqXYQdhBik6-J5wlcUd5u" />
+                            </div>
+                            <h3 class="font-headline-md text-2xl text-primary text-center">Fairy Tale</h3>
+                        </div>
+                        <!-- Gallery Item 5 -->
+                        <div
+                            class="bg-surface p-4 rounded-sm shadow-creamy border border-primary/20 transform rotate-0 sm:-rotate-1 hover:scale-110 hover:shadow-2xl hover:rotate-0 hover:z-30 active:scale-[0.98] transition-all duration-300 cursor-pointer relative z-10 md:translate-y-2">
+                            <div
+                                class="absolute -top-3 left-1/2 -translate-x-1/2 w-12 h-6 bg-[#ffddba]/80 shadow-sm z-10 rotate-3">
+                            </div>
+                            <div class="w-full aspect-[3/4] overflow-hidden bg-surface-variant mb-4">
+                                <img class="w-full h-full object-cover" alt="Naked Cake"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBt9-zWAD3EEEryfuZ2aHC9j1k4K303yOtr7i_b53EMeKL29T2_9k3FChpycNDI5qOl4M77DyIzc7xs7SQNu6l9Bnp05DTNXq0AeptgGrItBwbYYxb7Gn-HDyC33Vc8m8WjUTsVtIVHI0fo8xIoUIWPyNLLQqjZHaXXK7oEr3LqEsFC0zUV_F7emDTizHFmNMYmcChq3s3ieW49RT1_rCpWdYLCBtVeShZ4cdmf3XF3c_n43cLmbATh" />
+                            </div>
+                            <h3 class="font-headline-md text-2xl text-primary text-center">Naked Cake</h3>
+                        </div>
+                        <!-- Gallery Item 6 -->
+                        <div
+                            class="bg-surface p-4 rounded-sm shadow-creamy border border-primary/20 transform rotate-0 sm:rotate-2 hover:scale-105 hover:shadow-2xl hover:rotate-0 hover:z-20 active:scale-[0.98] transition-all duration-300 cursor-pointer relative md:-translate-y-6">
+                            <div
+                                class="absolute -top-3 left-1/2 -translate-x-1/2 w-12 h-6 bg-[#ffddba]/80 shadow-sm z-10 -rotate-2">
+                            </div>
+                            <div class="w-full aspect-[3/4] overflow-hidden bg-surface-variant mb-4">
+                                <img class="w-full h-full object-cover" alt="Comic Blast Cake"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB46W-PcevdqRdIMM3bQNQAGs_T8wQWO398uslZeoqJyxWRI63tEc_xqssleV2FbSQtdEDS5i0So3haHvFeyaN049IeL8SzGGgMHR2e56AxkY_EW677Z6JnuBUwwcnYELFnCcgM5z2eoaOgnBbDSvw8yVayoq3mm_RH5ci5nTdmeJsjaxxCwPmmzdJL3XmXQZ-DxFnO_F-062ute33SCVNQM3q0X0cWONkZGP3v5AfB09mA3frv-WGh" />
+                            </div>
+                            <h3 class="font-headline-md text-2xl text-primary text-center">Comic Blast</h3>
+                        </div>
+                    </div>
+                </section>
+                <!-- Drip Divider 2 -->
+                <div class="w-full h-12 relative z-20 -mt-1 bg-transparent pointer-events-none">
+                    <svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 1200 50">
+                        <path class="frosting-drip-mint"
+                            d="M0,0 Q20,35 40,15 T80,25 T120,5 T160,40 T200,20 T240,45 T280,10 T320,30 T360,5 T400,25 T440,10 T480,45 T520,15 T560,35 T600,10 T640,25 T680,5 T720,40 T760,20 T800,35 T840,10 T880,30 T920,5 T960,45 T1000,15 T1040,30 T1080,10 T1120,25 T1160,5 T1200,35 L1200,50 L0,50 Z">
+                        </path>
+                    </svg>
+                </div>
+                <!-- Shakes Gallery -->
+                <section class="bg-[#f0faf8] px-4 sm:px-6 md:px-lg py-12 md:py-16 relative overflow-hidden" id="shakes">
+                    <div class="text-center mb-8 md:mb-10 relative z-10">
+                        <h2
+                            class="font-display-lg-mobile text-3xl sm:text-display-lg-mobile text-primary inline-block relative">
+                            Monster Shakes
+                            <svg class="absolute -top-3 -right-8 sm:-top-4 sm:-right-12 w-8 h-8 sm:w-10 sm:h-10 text-secondary-container/80 rotate-12"
+                                fill="currentColor" viewbox="0 0 24 24">
+                                <path
+                                    d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z">
+                                </path>
+                            </svg>
+                        </h2>
+                        <p class="font-body-lg text-sm sm:text-body-lg text-on-surface-variant mt-1">Sip into something
+                            spectacular.</p>
+                    </div>
+                    <div
+                        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto items-center pb-6 md:pb-8">
+                        <!-- Shake Item 1 -->
+                        <div
+                            class="bg-surface p-4 rounded-sm shadow-creamy border border-primary/20 transform rotate-0 sm:-rotate-3 hover:scale-105 hover:shadow-2xl hover:rotate-0 hover:z-20 active:scale-[0.98] transition-all duration-300 cursor-pointer relative md:translate-y-4">
+                            <div
+                                class="absolute -top-3 left-1/2 -translate-x-1/2 w-12 h-6 bg-[#ffddba]/80 shadow-sm z-10 rotate-2">
+                            </div>
+                            <div class="w-full aspect-[3/4] overflow-hidden bg-surface-variant mb-4">
+                                <img class="w-full h-full object-cover" alt="Vanilla Dream Shake"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4AOv5vIN2pNZbCOIMr9B08Ddl4ZrndxR_B4DlOIs6OZfvj60NFydeJj9Ce5kKa2mTL6v8R01aLu0g8ct9z1VjDfvWX5K5-mbyhqHNN2bpmAXJ1QPBdP4TFEOiSHtEAhP71kNbzTz8xL2RpbtoG27yC5A13Np2iWd68zyyamg7DtNqgIcIylP7F6rTrLU9vHKhOOKW6W7n-rVibPmGQ16hK9nlO6iMmSfGkJ3-7NqjNwwihZ9d0Xbo" />
+                            </div>
+                            <h3 class="font-headline-md text-2xl text-primary text-center">Vanilla Dream</h3>
+                        </div>
+                        <!-- Shake Item 2 -->
+                        <div
+                            class="bg-surface p-4 rounded-sm shadow-creamy border border-primary/20 transform rotate-0 sm:rotate-2 hover:scale-110 hover:shadow-2xl hover:rotate-0 hover:z-30 active:scale-[0.98] transition-all duration-300 cursor-pointer relative z-10 md:-translate-y-2">
+                            <div
+                                class="absolute -top-3 left-1/2 -translate-x-1/2 w-12 h-6 bg-[#ffddba]/80 shadow-sm z-10 -rotate-2">
+                            </div>
+                            <div class="w-full aspect-[3/4] overflow-hidden bg-surface-variant mb-4">
+                                <img class="w-full h-full object-cover" alt="Strawberry Sparkle Shake"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRcBo7_9f16CGLwLWsuTLFYGeZQIOtKY7-1PV98sj2EpUpcIUAajeOl7D1h1ZZNPr8iLTVCE48W6G1ixukQVFroSB0nK6tepmqpt84fpYRaVm3MFHA598zXmn2R2oH_VKOUnd12_YWZLRqKY7vo2N4npcnikzuf3KRYJU4YdnsQWhPNeJ99-qgKxUOG9CuYTubTo1tapDwcs0y2RYkxG5lvsLrAtcTfqympsQemonspxgcUhuzLyq1" />
+                            </div>
+                            <h3 class="font-headline-md text-2xl text-primary text-center">Strawberry Sparkle</h3>
+                        </div>
+                        <!-- Shake Item 3 -->
+                        <div
+                            class="bg-surface p-4 rounded-sm shadow-creamy border border-primary/20 transform rotate-0 sm:-rotate-2 hover:scale-105 hover:shadow-2xl hover:rotate-0 hover:z-20 active:scale-[0.98] transition-all duration-300 cursor-pointer relative md:translate-y-6 sm:col-span-2 md:col-span-1 max-w-sm mx-auto sm:max-w-none w-full">
+                            <div
+                                class="absolute -top-3 left-1/2 -translate-x-1/2 w-12 h-6 bg-[#ffddba]/80 shadow-sm z-10 rotate-1">
+                            </div>
+                            <div class="w-full aspect-[3/4] overflow-hidden bg-surface-variant mb-4">
+                                <img class="w-full h-full object-cover" alt="Choco Avalanche Shake"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw3lsLxpAuIP4i4kTM9BaAKbseCmMGKKybpFP9Qzo6KRDCogkOL_XWcdCSe43mREPKMVO79cm6Y6Ox6fB_WFhwQl32p1Mb2QKzcAtH0GGZ3ViqzGUCzhqfSZIpfjEVyGzMAn3B-Wfj6_SO2QJlTaN2Hhh-0GQiijc2BcCieQz-UAeVmpFD2rNeBwv38m8w3Vh3Tgr7EbbY_RVchA_nHC9_TIbVADBeYjBvIU3_DtRpU2pdMB6riWrH" />
+                            </div>
+                            <h3 class="font-headline-md text-2xl text-primary text-center">Choco Avalanche</h3>
+                        </div>
+                    </div>
+                </section>
+                <!-- Drip Divider 3 -->
+                <div class="w-full h-12 relative z-20 -mt-1 bg-transparent pointer-events-none">
+                    <svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 1200 50">
+                        <path class="frosting-drip-cream"
+                            d="M0,0 Q15,30 30,10 T60,20 T90,5 T120,40 T150,15 T180,35 T210,10 T240,25 T270,5 T300,30 T330,15 T360,45 T390,10 T420,30 T450,5 T480,25 T510,10 T540,40 T570,15 T600,30 T630,10 T660,20 T690,5 T720,35 T750,15 T780,40 T810,10 T840,25 T870,5 T900,30 T930,15 T960,45 T990,10 T1020,30 T1050,5 T1080,25 T1110,10 T1140,40 T1170,15 T1200,30 L1200,50 L0,50 Z">
+                        </path>
+                    </svg>
+                </div>
+                <!-- Testimonials Strip -->
+                <section class="bg-[#fff8f6] py-10 md:py-12 border-b border-primary/5">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-margin overflow-hidden">
+                        <div class="flex flex-col md:flex-row gap-4 sm:gap-6 justify-center items-stretch">
+                            <div
+                                class="bg-surface border-2 border-secondary-container rounded-xl p-5 sm:p-6 shadow-sm transform rotate-0 sm:-rotate-1 w-full max-w-md mx-auto md:max-w-sm">
+                                <div class="flex text-secondary mb-2">
+                                    <span class="material-symbols-outlined" data-weight="fill">star</span>
+                                    <span class="material-symbols-outlined" data-weight="fill">star</span>
+                                    <span class="material-symbols-outlined" data-weight="fill">star</span>
+                                    <span class="material-symbols-outlined" data-weight="fill">star</span>
+                                    <span class="material-symbols-outlined" data-weight="fill">star</span>
+                                </div>
+                                <p class="font-headline-md text-xl sm:text-2xl text-primary mb-2">"The best Barbie cake
+                                    my daughter could have dreamed of!"</p>
+                                <p class="font-body-md text-on-surface-variant text-xs sm:text-sm">- Sarah T.</p>
+                            </div>
+                            <div
+                                class="bg-surface border-2 border-tertiary-container/30 rounded-xl p-5 sm:p-6 shadow-sm transform rotate-0 sm:rotate-2 w-full max-w-md mx-auto md:max-w-sm md:-translate-y-4">
+                                <div class="flex text-secondary mb-2">
+                                    <span class="material-symbols-outlined" data-weight="fill">star</span>
+                                    <span class="material-symbols-outlined" data-weight="fill">star</span>
+                                    <span class="material-symbols-outlined" data-weight="fill">star</span>
+                                    <span class="material-symbols-outlined" data-weight="fill">star</span>
+                                    <span class="material-symbols-outlined" data-weight="fill">star</span>
+                                </div>
+                                <p class="font-headline-md text-xl sm:text-2xl text-primary mb-2">"Those shakes are a
+                                    work of art. Almost too pretty to eat!"</p>
+                                <p class="font-body-md text-on-surface-variant text-xs sm:text-sm">- James L.</p>
+                            </div>
+                            <div
+                                class="bg-surface border-2 border-secondary-container rounded-xl p-5 sm:p-6 shadow-sm transform rotate-0 sm:-rotate-2 w-full max-w-md mx-auto md:max-w-sm">
+                                <div class="flex text-secondary mb-2">
+                                    <span class="material-symbols-outlined" data-weight="fill">star</span>
+                                    <span class="material-symbols-outlined" data-weight="fill">star</span>
+                                    <span class="material-symbols-outlined" data-weight="fill">star</span>
+                                    <span class="material-symbols-outlined" data-weight="fill">star</span>
+                                    <span class="material-symbols-outlined" data-weight="fill">star</span>
+                                </div>
+                                <p class="font-headline-md text-xl sm:text-2xl text-primary mb-2">"Our wedding cake was
+                                    everything we wanted and more."</p>
+                                <p class="font-body-md text-on-surface-variant text-xs sm:text-sm">- Emily R.</p>
                             </div>
                         </div>
                     </div>
+                </section>
+                <!-- About Section -->
+                <section class="py-12 md:py-16 px-4 sm:px-6 md:px-margin bg-[#fff8f6] relative overflow-hidden"
+                    id="about">
+                    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-10">
+                        <div class="flex-1 relative w-full max-w-sm sm:max-w-md mx-auto">
+                            <div
+                                class="rounded-2xl overflow-hidden border-4 border-surface shadow-creamy transform rotate-0 sm:-rotate-2">
+                                <img alt="About us" class="w-full h-auto object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZkroie0pKDw3T_-SOt2ozZ9rp9BpYL97ofusaKEzzfj_xV742PNHBpD1Ov5KS2JZN-eU6W4OSYv_TeKrc4NX0A_mfNrsygi5N8Ap7lCZEr85Lc5H1kFDy80_lhfhzOz6hOjZkKDMOr_SyvIya4xlY1EML15lhlgmrlYDv7tYheO4Y014WSN0H44eINyeztXpqLECBXdhDJE7CHXablrxgYaFIl8xjz5iaCV4yGZVDuBZwsSmHkNJg" />
+                            </div>
+                            <svg class="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 w-12 h-12 sm:w-16 sm:h-16 text-tertiary-container/40 rotate-12 z-10 pointer-events-none"
+                                fill="currentColor" viewbox="0 0 24 24">
+                                <path
+                                    d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="flex-1 text-center md:text-left">
+                            <h2
+                                class="font-display-lg-mobile text-3xl sm:text-display-lg-mobile text-primary mb-3 sm:mb-4">
+                                Baked with Love</h2>
+                            <p class="font-body-lg text-sm sm:text-body-lg text-on-surface-variant mb-4 sm:mb-6">
+                                We're your local sweet spot, dedicated to crafting edible masterpieces. Every sprinkle,
+                                every swirl, and every slice is made right here in our neighborhood kitchen.
+                            </p>
+                            <p class="font-body-md text-sm sm:text-base text-on-surface-variant">
+                                Come say hi and grab a treat!
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <!-- CTA Section -->
+                <section class="py-12 md:py-16 px-4 sm:px-6 md:px-margin text-center bg-[#fff8f6]">
+                    <h2
+                        class="font-display-lg-mobile md:font-display-lg text-3xl sm:text-display-lg-mobile md:text-display-lg text-primary mb-6 relative inline-block">
+                        Ready for something sweet?
+                        <svg class="absolute -bottom-3 -right-6 sm:-bottom-4 sm:right-0 w-6 h-6 sm:w-8 sm:h-8 text-secondary-container/80 rotate-45"
+                            fill="currentColor" viewbox="0 0 24 24">
+                            <path
+                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
+                            </path>
+                        </svg>
+                    </h2>
+                    <div class="mt-4 flex justify-center">
+                        <button
+                            class="w-full sm:w-auto min-h-[48px] bg-primary text-on-primary px-8 py-4 rounded-full font-label-bold text-base sm:text-lg shadow-creamy hover:-translate-y-1 hover:shadow-creamy-hover active:scale-95 transition-all duration-300 border-b-2 border-primary-fixed/20 flex items-center justify-center gap-3">
+                            <svg class="lucide lucide-message-circle" fill="none" height="24" stroke="currentColor"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"
+                                width="24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+                            </svg>
+                            Book via WhatsApp
+                        </button>
+                    </div>
+                </section>
+            </main>
+            <!-- Footer -->
+            <footer
+                class="w-full px-4 sm:px-6 md:px-margin py-8 md:py-10 flex flex-col items-center gap-6 text-center bg-[#4a2e23] border-t border-[#321910]">
+                <div class="font-headline-md text-3xl sm:text-4xl text-[#fff8f6] mb-1 sm:mb-2">
+                    Cakes &amp; Shakes
                 </div>
-            </div>
-            <!-- Right: Image -->
-            <div class="flex-1">
-                <div class="w-full aspect-[4/3] sm:aspect-[1.15] max-w-md mx-auto md:max-w-none rounded overflow-hidden" id="occasion-image-container">
-                    <img id="occasion-image" class="w-full h-full object-cover transition-opacity duration-500" src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&auto=format&fit=crop&q=80" alt="Birthday party celebration"/>
+                <div
+                    class="flex flex-wrap justify-center gap-x-6 sm:gap-x-8 gap-y-3 sm:gap-y-4 mb-2 sm:mb-4 text-xs sm:text-sm">
+                    <a class="font-body-md text-[#e9e1de] hover:text-[#ffddba] underline decoration-dotted transition-all"
+                        href="#what-we-craft">What We Craft</a>
+                    <a class="font-body-md text-[#e9e1de] hover:text-[#ffddba] underline decoration-dotted transition-all"
+                        href="#cakes">Cakes</a>
+                    <a class="font-body-md text-[#e9e1de] hover:text-[#ffddba] underline decoration-dotted transition-all"
+                        href="#shakes">Shakes</a>
+                    <a class="font-body-md text-[#e9e1de] hover:text-[#ffddba] underline decoration-dotted transition-all"
+                        href="https://maps.app.goo.gl/MAoyBanSnWvVWghy8" target="_blank">ðŸ“ Find Us</a>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ===== SCENES FROM THE GOOD STUFF ===== -->
-<section class="bg-[#24131f] px-4 sm:px-6 md:px-12 py-14 sm:py-20 md:py-28" id="ss-studio">
-    <div class="max-w-6xl mx-auto">
-        <div class="flex flex-col md:flex-row justify-between items-start mb-8 sm:mb-12">
-            <div>
-                <span class="ss-label">A Glimpse Inside</span>
-                <h2 class="ss-heading text-3xl sm:text-4xl md:text-5xl mt-3 sm:mt-4">Scenes from<br/><em>our celebrations.</em></h2>
-            </div>
-            <p class="ss-body-text text-xs sm:text-sm max-w-xs mt-4 sm:mt-6 md:mt-auto md:text-right">
-                Your private celebration haven, curated and tailored for your gathering.
-            </p>
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div class="ss-gallery-item aspect-[4/3] sm:aspect-[1.15] w-full">
-                <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&auto=format&fit=crop&q=80" alt="Celebration setup with balloon decor"/>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-rows-2 gap-4">
-                <div class="ss-gallery-item aspect-[16/9] sm:aspect-auto">
-                    <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&auto=format&fit=crop&q=80" alt="Warm ambient table setup with candles"/>
-                </div>
-                <div class="ss-gallery-item aspect-[16/9] sm:aspect-auto">
-                    <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&auto=format&fit=crop&q=80" alt="Celebration dining table with fairy lights"/>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ===== MAKE THE SPACE YOURS ===== -->
-<section class="bg-[#24131f] px-4 sm:px-6 md:px-12 py-14 sm:py-20 md:py-28 border-t border-[#765b55]/20">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-8 sm:gap-12 items-center">
-        <div class="flex-1 order-2 md:order-1 w-full max-w-sm sm:max-w-md mx-auto">
-            <div class="aspect-[0.85] rounded overflow-hidden">
-                <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&auto=format&fit=crop&q=80" alt="Private celebration dining and event setup"/>
-            </div>
-        </div>
-        <div class="flex-1 order-1 md:order-2 text-center md:text-left">
-            <span class="ss-label">Your Space</span>
-            <h2 class="ss-heading text-3xl sm:text-4xl md:text-5xl mt-3 sm:mt-4 mb-4 sm:mb-6">Make the<br/><em>space yours.</em></h2>
-            <p class="ss-body-text text-sm sm:text-base mb-3 sm:mb-4">
-                Every booking starts with a friendly conversation. Tell us what you're celebrating, your guest count, and your favorite vibe — and we'll build the rest.
-            </p>
-            <p class="ss-body-text text-xs sm:text-sm text-[#987d7b]">
-                From custom balloon arches to personalized table settings, curated playlists to delicious cakes — we handle every detail so you can enjoy the moment.
-            </p>
-        </div>
-    </div>
-</section>
-
-<!-- ===== THE MEANING OF IT ===== -->
-<section class="bg-[#2b1724] px-4 sm:px-6 md:px-12 py-14 sm:py-20 md:py-28">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-8 sm:gap-12 items-center">
-        <div class="flex-1 text-center md:text-left">
-            <span class="ss-label">Our Philosophy</span>
-            <h2 class="ss-heading text-3xl sm:text-4xl md:text-5xl mt-3 sm:mt-4 mb-4 sm:mb-6">Celebrate<br/><em>together.</em></h2>
-            <p class="ss-body-text text-sm sm:text-base mb-3 sm:mb-4">
-                We believe the most memorable celebrations happen in intimate rooms where every detail has been thoughtfully prepared — the lighting, the flowers, the music, and the food.
-            </p>
-            <p class="ss-body-text text-xs sm:text-sm text-[#987d7b]">
-                Surprise Studio was built to give you a dedicated private venue to laugh, toast, celebrate, and create memories with the people who matter most.
-            </p>
-        </div>
-        <div class="flex-1 w-full max-w-sm sm:max-w-md mx-auto">
-            <div class="aspect-[1.15] rounded overflow-hidden">
-                <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=800&auto=format&fit=crop&q=80" alt="Friends celebrating together"/>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ===== NOTES FROM GUESTS ===== -->
-<section class="bg-[#24131f] px-4 sm:px-6 md:px-12 py-14 sm:py-20 md:py-28" id="ss-testimonials">
-    <div class="max-w-6xl mx-auto">
-        <div class="text-center mb-8 sm:mb-14">
-            <span class="ss-label">Notes from Guests</span>
-            <h2 class="ss-heading text-3xl sm:text-4xl md:text-5xl mt-3 sm:mt-4">What they <em>said.</em></h2>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
-            <div class="ss-testimonial rounded p-5 sm:p-8">
-                <p class="font-serif text-lg sm:text-xl italic text-[#f1e6d3] mb-6 sm:mb-8 leading-relaxed">
-                    "The setup took our breath away. Walking in and seeing everything arranged so thoughtfully made our anniversary unforgettable."
+                <p class="font-body-md text-body-md text-[#d4c3bd] text-xs sm:text-sm opacity-90 max-w-sm mx-auto">
+                    Â© 2026 Cakes &amp; Shakes. Baked with love and a dash of sprinkles.
                 </p>
-                <div class="border-t border-[#765b55]/30 pt-3 sm:pt-4">
-                    <span class="ss-label text-[10px] text-[#d7b36a]">Maya &amp; Alex</span>
-                    <p class="ss-label text-[9px] text-[#765b55] mt-0.5 sm:mt-1">Anniversary Celebration</p>
+            </footer>
+        </div><!-- End Cakes Page -->
+
+
+        <!-- ============================================ -->
+        <!-- SURPRISE STUDIO PAGE                         -->
+        <!-- ============================================ -->
+        <div class="page-container hidden-page ss-body" id="surprise-page">
+
+            <!-- Surprise Studio Navbar -->
+            <nav class="fixed top-0 left-0 w-full z-50 bg-[#24131f]/95 backdrop-blur-md border-b border-[#d7b36a]/10 transition-all duration-300"
+                id="ss-nav">
+                <div class="max-w-7xl mx-auto flex justify-between items-center px-4 sm:px-6 md:px-12 py-3.5 md:py-4">
+                    <div class="flex flex-col cursor-pointer" onclick="window.scrollTo({top:0, behavior:'smooth'})">
+                        <span class="ss-label text-[8px] sm:text-[9px]" style="letter-spacing:0.15em;">A
+                            Neighborhood</span>
+                        <span class="font-serif text-lg sm:text-xl text-[#f1e6d3] italic">Surprise Studio</span>
+                    </div>
+                    <div class="hidden md:flex items-center gap-8">
+                        <a class="ss-nav-link" href="#ss-occasions">Occasions</a>
+                        <a class="ss-nav-link" href="#ss-studio">The Studio</a>
+                        <a class="ss-nav-link" href="#ss-testimonials">Notes from Guests</a>
+                        <a class="ss-nav-link text-[#D4AF6A] hover:underline cursor-pointer" style="color: #D4AF6A;"
+                            onclick="switchTo('cakes')">Also by us: Cakes &amp; Shakes &rarr;</a>
+                    </div>
+                    <div class="flex items-center gap-2 sm:gap-3">
+                        <a href="https://share.google/DHpeAj0b6yi6G7g2y" target="_blank"
+                            class="hidden sm:inline-flex ss-btn-outline text-[10px] py-2 px-4">
+                            Make an Enquiry <span style="font-size:14px;">â†—</span>
+                        </a>
+                        <!-- Mobile Hamburger Button -->
+                        <button id="ss-menu-btn" onclick="toggleSSMenu()" aria-label="Toggle navigation menu"
+                            class="md:hidden p-2 rounded-lg text-[#d7b36a] hover:bg-white/5 focus:outline-none flex items-center justify-center">
+                            <span class="material-symbols-outlined text-2xl" id="ss-menu-icon">menu</span>
+                        </button>
+                    </div>
                 </div>
-            </div>
-            <div class="ss-testimonial rounded p-5 sm:p-8">
-                <p class="font-serif text-lg sm:text-xl italic text-[#f1e6d3] mb-6 sm:mb-8 leading-relaxed">
-                    "Everything was arranged with so much love and care. The decor, the warm ambiance, and the team's hospitality made it seamless."
-                </p>
-                <div class="border-t border-[#765b55]/30 pt-3 sm:pt-4">
-                    <span class="ss-label text-[10px] text-[#d7b36a]">Theo R.</span>
-                    <p class="ss-label text-[9px] text-[#765b55] mt-0.5 sm:mt-1">Surprise Celebration</p>
+
+                <!-- Mobile Dropdown Menu -->
+                <div id="ss-mobile-menu"
+                    class="hidden md:hidden bg-[#24131f] border-b border-[#d7b36a]/20 px-5 py-5 shadow-2xl transition-all duration-300">
+                    <div class="flex flex-col gap-3">
+                        <a class="ss-nav-link text-xs py-2.5 border-b border-white/5" href="#ss-occasions"
+                            onclick="toggleSSMenu()">Occasions</a>
+                        <a class="ss-nav-link text-xs py-2.5 border-b border-white/5" href="#ss-studio"
+                            onclick="toggleSSMenu()">The Studio</a>
+                        <a class="ss-nav-link text-xs py-2.5 border-b border-white/5" href="#ss-testimonials"
+                            onclick="toggleSSMenu()">Notes from Guests</a>
+                        <a class="ss-nav-link text-[11px] py-2.5 border-b border-white/5 text-[#D4AF6A] cursor-pointer"
+                            style="color: #D4AF6A;" onclick="toggleSSMenu(); switchTo('cakes')">Also by us: Cakes &amp;
+                            Shakes &rarr;</a>
+                        <div class="pt-2">
+                            <a href="https://share.google/DHpeAj0b6yi6G7g2y" target="_blank"
+                                class="w-full ss-btn-outline text-center justify-center py-3 text-[11px] block">
+                                Make an Enquiry <span>â†—</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="ss-testimonial rounded p-5 sm:p-8">
-                <p class="font-serif text-lg sm:text-xl italic text-[#f1e6d3] mb-6 sm:mb-8 leading-relaxed">
-                    "Best birthday party we've ever hosted! The decorations, the cake table, and the team were pure magic."
-                </p>
-                <div class="border-t border-[#765b55]/30 pt-3 sm:pt-4">
-                    <span class="ss-label text-[10px] text-[#d7b36a]">Nia &amp; Jules</span>
-                    <p class="ss-label text-[9px] text-[#765b55] mt-0.5 sm:mt-1">Birthday Gathering</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+            </nav>
 
-<!-- ===== FINAL CTA ===== -->
-<section class="bg-[#24131f] px-4 sm:px-6 md:px-12 py-16 sm:py-24 md:py-32 text-center border-t border-[#765b55]/20">
-    <span class="ss-label">Your Celebration</span>
-    <h2 class="ss-heading text-4xl sm:text-5xl md:text-7xl mt-4 sm:mt-6 mb-3 sm:mb-4 max-w-3xl mx-auto">
-        Ready to celebrate?<br/><em>Let's create unforgettable memories.</em>
-    </h2>
-    <p class="ss-body-text text-sm sm:text-base max-w-md mx-auto mb-8 sm:mb-10">
-        Tell us about your celebration and we'll get everything ready for you.
-    </p>
-    <a href="https://share.google/DHpeAj0b6yi6G7g2y" target="_blank" class="ss-btn-primary w-full sm:w-auto inline-flex justify-center min-h-[48px] py-4 px-8">
-        Book your celebration <span>↗</span>
-    </a>
-</section>
+            <main class="pt-0">
 
-<!-- ===== FOOTER ===== -->
-<footer class="bg-[#1b1018] border-t border-[#765b55]/20 px-4 sm:px-6 md:px-12 py-8 sm:py-12">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8 sm:gap-10">
-        <div>
-            <span class="ss-label text-[8px] sm:text-[9px]" style="letter-spacing:0.15em;">A Neighborhood</span>
-            <span class="font-serif text-xl sm:text-2xl text-[#f1e6d3] italic block mt-1">Surprise Studio</span>
-            <p class="ss-body-text text-xs sm:text-sm mt-3 sm:mt-4 max-w-xs">
-                A private celebration studio for the moments that matter most.
-            </p>
-        </div>
-        <div class="flex flex-col gap-2 sm:gap-3">
-            <span class="ss-label text-[9px] sm:text-[10px] mb-1 sm:mb-2">Quick Links</span>
-            <a href="#ss-occasions" class="ss-nav-link text-[10px]">Occasions</a>
-            <a href="#ss-studio" class="ss-nav-link text-[10px]">The Studio</a>
-            <a href="#ss-testimonials" class="ss-nav-link text-[10px]">Guest Notes</a>
-        </div>
-        <div class="flex flex-col gap-2 sm:gap-3">
-            <span class="ss-label text-[9px] sm:text-[10px] mb-1 sm:mb-2">Find Us</span>
-            <a href="https://share.google/DHpeAj0b6yi6G7g2y" target="_blank" class="ss-nav-link text-[10px]">📍 Google Maps</a>
-            <a href="https://www.instagram.com/surprisestudio.in/" target="_blank" class="ss-nav-link text-[10px]">Instagram</a>
-        </div>
-    </div>
-    <div class="max-w-6xl mx-auto mt-8 sm:mt-10 pt-4 sm:pt-6 border-t border-[#765b55]/20 flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4 text-center">
-        <p class="ss-label text-[8px] sm:text-[9px] text-[#765b55]">© 2024 Surprise Studio. All rights reserved.</p>
-        <p class="ss-label text-[8px] sm:text-[9px] text-[#765b55]">Crafted with ♥ in the neighborhood</p>
-    </div>
-</footer>
+                <!-- ===== HERO SECTION ===== -->
+                <section class="ss-hero min-h-screen relative flex items-end">
+                    <div class="ss-hero-bg"
+                        style="background-image: url('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=1600&auto=format&fit=crop&q=80');">
+                    </div>
+                    <div class="ss-hero-overlay"></div>
+                    <div class="ss-hero-content w-full px-4 sm:px-6 md:px-12 pb-12 sm:pb-16 pt-28 sm:pt-36 md:pt-40">
+                        <div class="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
+                            <div class="w-8 sm:w-10 h-[1px] bg-[#d7b36a]"></div>
+                            <span class="ss-label text-[10px] sm:text-[11px]">Est. in the Neighborhood, 2018</span>
+                        </div>
+                        <h1
+                            class="ss-heading text-5xl sm:text-6xl md:text-8xl leading-[0.92] sm:leading-[0.88] mb-6 md:mb-8 max-w-3xl">
+                            Make every<br /><em>celebration</em><br />special.
+                        </h1>
+                        <p class="ss-body-text text-base sm:text-lg max-w-lg mb-8 md:mb-10">
+                            A private celebration space for the people and milestones worth gathering around.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
+                            <a href="https://share.google/DHpeAj0b6yi6G7g2y" target="_blank"
+                                class="ss-btn-primary w-full sm:w-auto justify-center min-h-[48px]">Plan your
+                                celebration <span>â†—</span></a>
+                            <a href="#ss-occasions"
+                                class="ss-btn-outline w-full sm:w-auto justify-center min-h-[48px]">Explore the
+                                occasions <span>â†“</span></a>
+                        </div>
+                        <!-- Bottom bar -->
+                        <div
+                            class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mt-12 sm:mt-16 pt-4 border-t border-[#765b55]/30">
+                            <span class="ss-label text-[9px] sm:text-[10px] text-[#987d7b]">Hyderabad, India</span>
+                            <span class="ss-label text-[9px] sm:text-[10px] text-[#987d7b]">Scroll to enter â†“</span>
+                        </div>
+                    </div>
+                </section>
 
-</main>
-</div><!-- End Surprise Page -->
+                <!-- ===== MARQUEE STRIP ===== -->
+                <section class="bg-[#1b1018] border-y border-[#765b55]/20 py-3 sm:py-5 overflow-hidden">
+                    <div class="marquee-track flex items-center whitespace-nowrap" style="width: max-content;">
+                        <span class="font-serif italic text-lg sm:text-2xl text-[#d7b36a] mx-4 sm:mx-8">Celebrate with
+                            the people you love</span>
+                        <span class="text-[#765b55] mx-2 sm:mx-4">Â·</span>
+                        <span class="font-serif italic text-lg sm:text-2xl text-[#d7b36a] mx-4 sm:mx-8">Good times
+                            happen here</span>
+                        <span class="text-[#765b55] mx-2 sm:mx-4">Â·</span>
+                        <span class="font-serif italic text-lg sm:text-2xl text-[#d7b36a] mx-4 sm:mx-8">Birthdays,
+                            surprises &amp; milestones</span>
+                        <span class="text-[#765b55] mx-2 sm:mx-4">Â·</span>
+                        <span class="font-serif italic text-lg sm:text-2xl text-[#d7b36a] mx-4 sm:mx-8">Your private
+                            party space</span>
+                        <span class="text-[#765b55] mx-2 sm:mx-4">Â·</span>
+                        <span class="font-serif italic text-lg sm:text-2xl text-[#d7b36a] mx-4 sm:mx-8">Celebrate with
+                            the people you love</span>
+                        <span class="text-[#765b55] mx-2 sm:mx-4">Â·</span>
+                        <span class="font-serif italic text-lg sm:text-2xl text-[#d7b36a] mx-4 sm:mx-8">Good times
+                            happen here</span>
+                        <span class="text-[#765b55] mx-2 sm:mx-4">Â·</span>
+                        <span class="font-serif italic text-lg sm:text-2xl text-[#d7b36a] mx-4 sm:mx-8">Birthdays,
+                            surprises &amp; milestones</span>
+                        <span class="text-[#765b55] mx-2 sm:mx-4">Â·</span>
+                        <span class="font-serif italic text-lg sm:text-2xl text-[#d7b36a] mx-4 sm:mx-8">Your private
+                            party space</span>
+                    </div>
+                </section>
+
+                <!-- ===== THE FEELING ===== -->
+                <section class="bg-[#24131f] px-4 sm:px-6 md:px-12 py-16 sm:py-20 md:py-32">
+                    <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-8 sm:gap-12 md:gap-20">
+                        <div class="flex-shrink-0">
+                            <span class="ss-label">The Feeling</span>
+                            <div class="w-8 h-[2px] bg-[#d7b36a] mt-2 sm:mt-3"></div>
+                        </div>
+                        <div>
+                            <h2
+                                class="ss-heading text-3xl sm:text-4xl md:text-6xl leading-[1.05] sm:leading-[1] mb-6 sm:mb-8">
+                                Some moments deserve more than a reservation. <em>They deserve a setting.</em>
+                            </h2>
+                            <p class="ss-body-text text-sm sm:text-base max-w-xl">
+                                We turn our studio into the exact right room for your story â€” warm, welcoming, deeply
+                                personal, and designed for genuine celebration.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ===== THE OCCASIONS ===== -->
+                <section class="bg-[#2b1724] px-4 sm:px-6 md:px-12 py-14 sm:py-20 md:py-28" id="ss-occasions">
+                    <div class="max-w-6xl mx-auto">
+                        <span class="ss-label">Pick your beautiful excuse</span>
+                        <h2 class="ss-heading text-3xl sm:text-4xl md:text-6xl mt-3 sm:mt-4 mb-8 sm:mb-10">The occasions
+                        </h2>
+
+                        <div class="flex flex-col md:flex-row gap-8 sm:gap-10 md:gap-16">
+                            <!-- Left: Accordion -->
+                            <div class="flex-1">
+                                <div class="occasion-item active py-4 sm:py-6" data-occasion="0"
+                                    onclick="selectOccasion(0)">
+                                    <div class="flex items-start gap-4">
+                                        <span class="ss-label text-[#d7b36a] mt-1.5 sm:mt-2">01</span>
+                                        <div class="flex-1">
+                                            <div class="flex items-center justify-between">
+                                                <h3
+                                                    class="occasion-title font-serif text-2xl sm:text-3xl text-[#f1e6d3] transition-colors">
+                                                    The birthday party</h3>
+                                                <span class="text-[#d7b36a]">â†—</span>
+                                            </div>
+                                            <div class="occasion-desc">
+                                                <p class="ss-body-text text-sm mt-2 sm:mt-3">The kind of birthday that
+                                                    becomes the joyful story everyone talks about all year.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="occasion-item py-4 sm:py-6" data-occasion="1" onclick="selectOccasion(1)">
+                                    <div class="flex items-start gap-4">
+                                        <span class="ss-label text-[#765b55] mt-1.5 sm:mt-2">02</span>
+                                        <div class="flex-1">
+                                            <div class="flex items-center justify-between">
+                                                <h3
+                                                    class="occasion-title font-serif text-2xl sm:text-3xl text-[#f1e6d3] transition-colors">
+                                                    The proposal &amp; surprise</h3>
+                                                <span class="text-[#765b55]">â†—</span>
+                                            </div>
+                                            <div class="occasion-desc">
+                                                <p class="ss-body-text text-sm mt-2 sm:mt-3">A heartwarming ambiance
+                                                    designed to create a memory you'll cherish forever.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="occasion-item py-4 sm:py-6" data-occasion="2" onclick="selectOccasion(2)">
+                                    <div class="flex items-start gap-4">
+                                        <span class="ss-label text-[#765b55] mt-1.5 sm:mt-2">03</span>
+                                        <div class="flex-1">
+                                            <div class="flex items-center justify-between">
+                                                <h3
+                                                    class="occasion-title font-serif text-2xl sm:text-3xl text-[#f1e6d3] transition-colors">
+                                                    The anniversary</h3>
+                                                <span class="text-[#765b55]">â†—</span>
+                                            </div>
+                                            <div class="occasion-desc">
+                                                <p class="ss-body-text text-sm mt-2 sm:mt-3">Because celebrating your
+                                                    journey together deserves an intimate, magical setting.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="occasion-item py-4 sm:py-6" data-occasion="3" onclick="selectOccasion(3)">
+                                    <div class="flex items-start gap-4">
+                                        <span class="ss-label text-[#765b55] mt-1.5 sm:mt-2">04</span>
+                                        <div class="flex-1">
+                                            <div class="flex items-center justify-between">
+                                                <h3
+                                                    class="occasion-title font-serif text-2xl sm:text-3xl text-[#f1e6d3] transition-colors">
+                                                    The new chapter</h3>
+                                                <span class="text-[#765b55]">â†—</span>
+                                            </div>
+                                            <div class="occasion-desc">
+                                                <p class="ss-body-text text-sm mt-2 sm:mt-3">Baby showers, farewells,
+                                                    reunions &amp; milestones â€” every new beginning deserves a
+                                                    gathering.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Right: Image -->
+                            <div class="flex-1">
+                                <div class="w-full aspect-[4/3] sm:aspect-[1.15] max-w-md mx-auto md:max-w-none rounded overflow-hidden"
+                                    id="occasion-image-container">
+                                    <img id="occasion-image"
+                                        class="w-full h-full object-cover transition-opacity duration-500"
+                                        src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&auto=format&fit=crop&q=80"
+                                        alt="Birthday party celebration" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ===== SCENES FROM THE GOOD STUFF ===== -->
+                <section class="bg-[#24131f] px-4 sm:px-6 md:px-12 py-14 sm:py-20 md:py-28" id="ss-studio">
+                    <div class="max-w-6xl mx-auto">
+                        <div class="flex flex-col md:flex-row justify-between items-start mb-8 sm:mb-12">
+                            <div>
+                                <span class="ss-label">A Glimpse Inside</span>
+                                <h2 class="ss-heading text-3xl sm:text-4xl md:text-5xl mt-3 sm:mt-4">Scenes
+                                    from<br /><em>our celebrations.</em></h2>
+                            </div>
+                            <p class="ss-body-text text-xs sm:text-sm max-w-xs mt-4 sm:mt-6 md:mt-auto md:text-right">
+                                Your private celebration haven, curated and tailored for your gathering.
+                            </p>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="ss-gallery-item aspect-[4/3] sm:aspect-[1.15] w-full">
+                                <img class="w-full h-full object-cover"
+                                    src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&auto=format&fit=crop&q=80"
+                                    alt="Celebration setup with balloon decor" />
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-rows-2 gap-4">
+                                <div class="ss-gallery-item aspect-[16/9] sm:aspect-auto">
+                                    <img class="w-full h-full object-cover"
+                                        src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&auto=format&fit=crop&q=80"
+                                        alt="Warm ambient table setup with candles" />
+                                </div>
+                                <div class="ss-gallery-item aspect-[16/9] sm:aspect-auto">
+                                    <img class="w-full h-full object-cover"
+                                        src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&auto=format&fit=crop&q=80"
+                                        alt="Celebration dining table with fairy lights" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ===== MAKE THE SPACE YOURS ===== -->
+                <section
+                    class="bg-[#24131f] px-4 sm:px-6 md:px-12 py-14 sm:py-20 md:py-28 border-t border-[#765b55]/20">
+                    <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-8 sm:gap-12 items-center">
+                        <div class="flex-1 order-2 md:order-1 w-full max-w-sm sm:max-w-md mx-auto">
+                            <div class="aspect-[0.85] rounded overflow-hidden">
+                                <img class="w-full h-full object-cover"
+                                    src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&auto=format&fit=crop&q=80"
+                                    alt="Private celebration dining and event setup" />
+                            </div>
+                        </div>
+                        <div class="flex-1 order-1 md:order-2 text-center md:text-left">
+                            <span class="ss-label">Your Space</span>
+                            <h2 class="ss-heading text-3xl sm:text-4xl md:text-5xl mt-3 sm:mt-4 mb-4 sm:mb-6">Make
+                                the<br /><em>space yours.</em></h2>
+                            <p class="ss-body-text text-sm sm:text-base mb-3 sm:mb-4">
+                                Every booking starts with a friendly conversation. Tell us what you're celebrating, your
+                                guest count, and your favorite vibe â€” and we'll build the rest.
+                            </p>
+                            <p class="ss-body-text text-xs sm:text-sm text-[#987d7b]">
+                                From custom balloon arches to personalized table settings, curated playlists to
+                                delicious cakes â€” we handle every detail so you can enjoy the moment.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ===== THE MEANING OF IT ===== -->
+                <section class="bg-[#2b1724] px-4 sm:px-6 md:px-12 py-14 sm:py-20 md:py-28">
+                    <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-8 sm:gap-12 items-center">
+                        <div class="flex-1 text-center md:text-left">
+                            <span class="ss-label">Our Philosophy</span>
+                            <h2 class="ss-heading text-3xl sm:text-4xl md:text-5xl mt-3 sm:mt-4 mb-4 sm:mb-6">
+                                Celebrate<br /><em>together.</em></h2>
+                            <p class="ss-body-text text-sm sm:text-base mb-3 sm:mb-4">
+                                We believe the most memorable celebrations happen in intimate rooms where every detail
+                                has been thoughtfully prepared â€” the lighting, the flowers, the music, and the food.
+                            </p>
+                            <p class="ss-body-text text-xs sm:text-sm text-[#987d7b]">
+                                Surprise Studio was built to give you a dedicated private venue to laugh, toast,
+                                celebrate, and create memories with the people who matter most.
+                            </p>
+                        </div>
+                        <div class="flex-1 w-full max-w-sm sm:max-w-md mx-auto">
+                            <div class="aspect-[1.15] rounded overflow-hidden">
+                                <img class="w-full h-full object-cover"
+                                    src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=800&auto=format&fit=crop&q=80"
+                                    alt="Friends celebrating together" />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ===== NOTES FROM GUESTS ===== -->
+                <section class="bg-[#24131f] px-4 sm:px-6 md:px-12 py-14 sm:py-20 md:py-28" id="ss-testimonials">
+                    <div class="max-w-6xl mx-auto">
+                        <div class="text-center mb-8 sm:mb-14">
+                            <span class="ss-label">Notes from Guests</span>
+                            <h2 class="ss-heading text-3xl sm:text-4xl md:text-5xl mt-3 sm:mt-4">What they
+                                <em>said.</em></h2>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+                            <div class="ss-testimonial rounded p-5 sm:p-8">
+                                <p
+                                    class="font-serif text-lg sm:text-xl italic text-[#f1e6d3] mb-6 sm:mb-8 leading-relaxed">
+                                    "The setup took our breath away. Walking in and seeing everything arranged so
+                                    thoughtfully made our anniversary unforgettable."
+                                </p>
+                                <div class="border-t border-[#765b55]/30 pt-3 sm:pt-4">
+                                    <span class="ss-label text-[10px] text-[#d7b36a]">Maya &amp; Alex</span>
+                                    <p class="ss-label text-[9px] text-[#765b55] mt-0.5 sm:mt-1">Anniversary Celebration
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="ss-testimonial rounded p-5 sm:p-8">
+                                <p
+                                    class="font-serif text-lg sm:text-xl italic text-[#f1e6d3] mb-6 sm:mb-8 leading-relaxed">
+                                    "Everything was arranged with so much love and care. The decor, the warm ambiance,
+                                    and the team's hospitality made it seamless."
+                                </p>
+                                <div class="border-t border-[#765b55]/30 pt-3 sm:pt-4">
+                                    <span class="ss-label text-[10px] text-[#d7b36a]">Theo R.</span>
+                                    <p class="ss-label text-[9px] text-[#765b55] mt-0.5 sm:mt-1">Surprise Celebration
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="ss-testimonial rounded p-5 sm:p-8">
+                                <p
+                                    class="font-serif text-lg sm:text-xl italic text-[#f1e6d3] mb-6 sm:mb-8 leading-relaxed">
+                                    "Best birthday party we've ever hosted! The decorations, the cake table, and the
+                                    team were pure magic."
+                                </p>
+                                <div class="border-t border-[#765b55]/30 pt-3 sm:pt-4">
+                                    <span class="ss-label text-[10px] text-[#d7b36a]">Nia &amp; Jules</span>
+                                    <p class="ss-label text-[9px] text-[#765b55] mt-0.5 sm:mt-1">Birthday Gathering</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ===== FINAL CTA ===== -->
+                <section
+                    class="bg-[#24131f] px-4 sm:px-6 md:px-12 py-16 sm:py-24 md:py-32 text-center border-t border-[#765b55]/20">
+                    <span class="ss-label">Your Celebration</span>
+                    <h2 class="ss-heading text-4xl sm:text-5xl md:text-7xl mt-4 sm:mt-6 mb-3 sm:mb-4 max-w-3xl mx-auto">
+                        Ready to celebrate?<br /><em>Let's create unforgettable memories.</em>
+                    </h2>
+                    <p class="ss-body-text text-sm sm:text-base max-w-md mx-auto mb-8 sm:mb-10">
+                        Tell us about your celebration and we'll get everything ready for you.
+                    </p>
+                    <a href="https://share.google/DHpeAj0b6yi6G7g2y" target="_blank"
+                        class="ss-btn-primary w-full sm:w-auto inline-flex justify-center min-h-[48px] py-4 px-8">
+                        Book your celebration <span>â†—</span>
+                    </a>
+                </section>
+
+                <!-- ===== FOOTER ===== -->
+                <footer class="bg-[#1b1018] border-t border-[#765b55]/20 px-4 sm:px-6 md:px-12 py-8 sm:py-12">
+                    <div
+                        class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8 sm:gap-10">
+                        <div>
+                            <span class="ss-label text-[8px] sm:text-[9px]" style="letter-spacing:0.15em;">A
+                                Neighborhood</span>
+                            <span class="font-serif text-xl sm:text-2xl text-[#f1e6d3] italic block mt-1">Surprise
+                                Studio</span>
+                            <p class="ss-body-text text-xs sm:text-sm mt-3 sm:mt-4 max-w-xs">
+                                A private celebration studio for the moments that matter most.
+                            </p>
+                        </div>
+                        <div class="flex flex-col gap-2 sm:gap-3">
+                            <span class="ss-label text-[9px] sm:text-[10px] mb-1 sm:mb-2">Quick Links</span>
+                            <a href="#ss-occasions" class="ss-nav-link text-[10px]">Occasions</a>
+                            <a href="#ss-studio" class="ss-nav-link text-[10px]">The Studio</a>
+                            <a href="#ss-testimonials" class="ss-nav-link text-[10px]">Guest Notes</a>
+                        </div>
+                        <div class="flex flex-col gap-2 sm:gap-3">
+                            <span class="ss-label text-[9px] sm:text-[10px] mb-1 sm:mb-2">Find Us</span>
+                            <a href="https://share.google/DHpeAj0b6yi6G7g2y" target="_blank"
+                                class="ss-nav-link text-[10px]">ðŸ“ Google Maps</a>
+                            <a href="https://www.instagram.com/surprisestudio.in/" target="_blank"
+                                class="ss-nav-link text-[10px]">Instagram</a>
+                        </div>
+                    </div>
+                    <div
+                        class="max-w-6xl mx-auto mt-8 sm:mt-10 pt-4 sm:pt-6 border-t border-[#765b55]/20 flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4 text-center">
+                        <p class="ss-label text-[8px] sm:text-[9px] text-[#765b55]">Â© 2026 Surprise Studio. All rights
+                            reserved.</p>
+                        <p class="ss-label text-[8px] sm:text-[9px] text-[#765b55]">Crafted with â™¥ in the neighborhood
+                        </p>
+                    </div>
+                </footer>
+
+            </main>
+        </div><!-- End Surprise Page -->
 
 
-<!-- ============================================ -->
-<!-- SCRIPTS                                      -->
-<!-- ============================================ -->
-<script>
-    let currentBrand = 'cakes';
+        <!-- ============================================ -->
+        <!-- SCRIPTS                                      -->
+        <!-- ============================================ -->
+        <script>
+            let currentBrand = 'cakes';
 
-    // Mobile Navigation Controls
-    function toggleCakesMenu() {
-        const menu = document.getElementById('cakes-mobile-menu');
-        const icon = document.getElementById('cakes-menu-icon');
-        if (!menu) return;
-        if (menu.classList.contains('hidden')) {
-            menu.classList.remove('hidden');
-            if (icon) icon.textContent = 'close';
-        } else {
-            menu.classList.add('hidden');
-            if (icon) icon.textContent = 'menu';
-        }
-    }
-
-    function toggleSSMenu() {
-        const menu = document.getElementById('ss-mobile-menu');
-        const icon = document.getElementById('ss-menu-icon');
-        if (!menu) return;
-        if (menu.classList.contains('hidden')) {
-            menu.classList.remove('hidden');
-            if (icon) icon.textContent = 'close';
-        } else {
-            menu.classList.add('hidden');
-            if (icon) icon.textContent = 'menu';
-        }
-    }
-
-    function closeMobileMenus() {
-        const cMenu = document.getElementById('cakes-mobile-menu');
-        const cIcon = document.getElementById('cakes-menu-icon');
-        if (cMenu && !cMenu.classList.contains('hidden')) {
-            cMenu.classList.add('hidden');
-            if (cIcon) cIcon.textContent = 'menu';
-        }
-        const sMenu = document.getElementById('ss-mobile-menu');
-        const sIcon = document.getElementById('ss-menu-icon');
-        if (sMenu && !sMenu.classList.contains('hidden')) {
-            sMenu.classList.add('hidden');
-            if (sIcon) sIcon.textContent = 'menu';
-        }
-    }
-
-    // Occasion images
-    const occasionImages = [
-        'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?w=800&auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1513151233558-d860c5398176?w=800&auto=format&fit=crop&q=80'
-    ];
-    const occasionAlts = ['Birthday celebration', 'Proposal setup', 'Anniversary celebration', 'New chapter gathering'];
-
-    function toggleBrand() {
-        if (currentBrand === 'cakes') {
-            switchTo('surprise');
-        } else {
-            switchTo('cakes');
-        }
-    }
-
-    function switchTo(brand) {
-        if (brand === currentBrand) return;
-        currentBrand = brand;
-        closeMobileMenus();
-
-        const cakesPage = document.getElementById('cakes-page');
-        const surprisePage = document.getElementById('surprise-page');
-        const body = document.body;
-
-        if (brand === 'surprise') {
-            // Switch to Surprise Studio
-            cakesPage.classList.remove('active-page');
-            cakesPage.classList.add('hidden-page');
-            
-            setTimeout(() => {
-                surprisePage.classList.remove('hidden-page');
-                surprisePage.classList.add('active-page');
-            }, 100);
-            
-            body.style.background = '#24131f';
-            document.title = 'Surprise Studio | Cakes & Shakes';
-        } else {
-            // Switch to Cakes & Shakes
-            surprisePage.classList.remove('active-page');
-            surprisePage.classList.add('hidden-page');
-            
-            setTimeout(() => {
-                cakesPage.classList.remove('hidden-page');
-                cakesPage.classList.add('active-page');
-            }, 100);
-            
-            body.style.background = '#fff8f6';
-            document.title = 'Cakes & Shakes | Surprise Studio';
-        }
-
-        // Scroll to top
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    // Occasion accordion
-    function selectOccasion(index) {
-        const items = document.querySelectorAll('.occasion-item');
-        items.forEach((item, i) => {
-            if (i === index) {
-                item.classList.add('active');
-                item.querySelector('span:first-child').classList.remove('text-[#765b55]');
-                item.querySelector('span:first-child').classList.add('text-[#d7b36a]');
-            } else {
-                item.classList.remove('active');
-                item.querySelector('span:first-child').classList.remove('text-[#d7b36a]');
-                item.querySelector('span:first-child').classList.add('text-[#765b55]');
+            // Mobile Navigation Controls
+            function toggleCakesMenu() {
+                const menu = document.getElementById('cakes-mobile-menu');
+                const icon = document.getElementById('cakes-menu-icon');
+                if (!menu) return;
+                if (menu.classList.contains('hidden')) {
+                    menu.classList.remove('hidden');
+                    if (icon) icon.textContent = 'close';
+                } else {
+                    menu.classList.add('hidden');
+                    if (icon) icon.textContent = 'menu';
+                }
             }
-        });
 
-        // Change image with fade
-        const img = document.getElementById('occasion-image');
-        if (img) {
-            img.style.opacity = '0';
-            setTimeout(() => {
-                img.src = occasionImages[index];
-                img.alt = occasionAlts[index];
-                img.style.opacity = '1';
-            }, 300);
-        }
-    }
-
-    // Scroll spy for Cakes nav
-    window.addEventListener('scroll', () => {
-        const nav = document.getElementById('main-nav');
-        if (nav && currentBrand === 'cakes') {
-            if (window.scrollY > 50) {
-                nav.classList.add('shadow-md');
-                nav.classList.remove('shadow-sm');
-            } else {
-                nav.classList.remove('shadow-md');
-                nav.classList.add('shadow-sm');
+            function toggleSSMenu() {
+                const menu = document.getElementById('ss-mobile-menu');
+                const icon = document.getElementById('ss-menu-icon');
+                if (!menu) return;
+                if (menu.classList.contains('hidden')) {
+                    menu.classList.remove('hidden');
+                    if (icon) icon.textContent = 'close';
+                } else {
+                    menu.classList.add('hidden');
+                    if (icon) icon.textContent = 'menu';
+                }
             }
-        }
-    });
-</script>
-</div><!-- End page wrapper -->
+
+            function closeMobileMenus() {
+                const cMenu = document.getElementById('cakes-mobile-menu');
+                const cIcon = document.getElementById('cakes-menu-icon');
+                if (cMenu && !cMenu.classList.contains('hidden')) {
+                    cMenu.classList.add('hidden');
+                    if (cIcon) cIcon.textContent = 'menu';
+                }
+                const sMenu = document.getElementById('ss-mobile-menu');
+                const sIcon = document.getElementById('ss-menu-icon');
+                if (sMenu && !sMenu.classList.contains('hidden')) {
+                    sMenu.classList.add('hidden');
+                    if (sIcon) sIcon.textContent = 'menu';
+                }
+            }
+
+            // Occasion images
+            const occasionImages = [
+                'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&auto=format&fit=crop&q=80',
+                'https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?w=800&auto=format&fit=crop&q=80',
+                'https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&auto=format&fit=crop&q=80',
+                'https://images.unsplash.com/photo-1513151233558-d860c5398176?w=800&auto=format&fit=crop&q=80'
+            ];
+            const occasionAlts = ['Birthday celebration', 'Proposal setup', 'Anniversary celebration', 'New chapter gathering'];
+
+            function toggleBrand() {
+                if (currentBrand === 'cakes') {
+                    switchTo('surprise');
+                } else {
+                    switchTo('cakes');
+                }
+            }
+
+            function switchTo(brand) {
+                if (brand === currentBrand) return;
+                currentBrand = brand;
+                closeMobileMenus();
+
+                const cakesPage = document.getElementById('cakes-page');
+                const surprisePage = document.getElementById('surprise-page');
+                const body = document.body;
+
+                if (brand === 'surprise') {
+                    // Switch to Surprise Studio
+                    cakesPage.classList.remove('active-page');
+                    cakesPage.classList.add('hidden-page');
+
+                    setTimeout(() => {
+                        surprisePage.classList.remove('hidden-page');
+                        surprisePage.classList.add('active-page');
+                    }, 100);
+
+                    body.style.background = '#24131f';
+                    document.title = 'Surprise Studio | Cakes & Shakes';
+                } else {
+                    // Switch to Cakes & Shakes
+                    surprisePage.classList.remove('active-page');
+                    surprisePage.classList.add('hidden-page');
+
+                    setTimeout(() => {
+                        cakesPage.classList.remove('hidden-page');
+                        cakesPage.classList.add('active-page');
+                    }, 100);
+
+                    body.style.background = '#fff8f6';
+                    document.title = 'Cakes & Shakes | Surprise Studio';
+                }
+
+                // Scroll to top
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            // Occasion accordion
+            function selectOccasion(index) {
+                const items = document.querySelectorAll('.occasion-item');
+                items.forEach((item, i) => {
+                    if (i === index) {
+                        item.classList.add('active');
+                        item.querySelector('span:first-child').classList.remove('text-[#765b55]');
+                        item.querySelector('span:first-child').classList.add('text-[#d7b36a]');
+                    } else {
+                        item.classList.remove('active');
+                        item.querySelector('span:first-child').classList.remove('text-[#d7b36a]');
+                        item.querySelector('span:first-child').classList.add('text-[#765b55]');
+                    }
+                });
+
+                // Change image with fade
+                const img = document.getElementById('occasion-image');
+                if (img) {
+                    img.style.opacity = '0';
+                    setTimeout(() => {
+                        img.src = occasionImages[index];
+                        img.alt = occasionAlts[index];
+                        img.style.opacity = '1';
+                    }, 300);
+                }
+            }
+
+            // Scroll spy for Cakes nav
+            window.addEventListener('scroll', () => {
+                const nav = document.getElementById('main-nav');
+                if (nav && currentBrand === 'cakes') {
+                    if (window.scrollY > 50) {
+                        nav.classList.add('shadow-md');
+                        nav.classList.remove('shadow-sm');
+                    } else {
+                        nav.classList.remove('shadow-md');
+                        nav.classList.add('shadow-sm');
+                    }
+                }
+            });
+        </script>
+    </div><!-- End page wrapper -->
 </body>
-</html>
 
+</html>
